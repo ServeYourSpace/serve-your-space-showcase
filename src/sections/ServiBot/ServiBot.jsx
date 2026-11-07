@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { fadeUp, stagger, viewport } from '../../animations/variants';
 import AnimatedWords from '../../components/AnimatedWords';
+import HandNote from '../../components/HandNote';
 import { usePrefersReducedMotion } from '../../hooks/useMediaQuery';
 import { cn } from '../../utils/cn';
 
@@ -153,7 +154,6 @@ export default function ServiBot() {
           <div className="grid items-center gap-12 lg:grid-cols-[1fr_1.05fr] lg:gap-16">
             <div>
               <motion.p variants={fadeUp} initial="hidden" whileInView="show" viewport={viewport} className="eyebrow">
-                <span className="h-1.5 w-1.5 rounded-full bg-brand-500" aria-hidden />
                 {t('servibot.eyebrow')}
               </motion.p>
               <h2 id="servibot-title" className="h-section mt-5">
@@ -203,6 +203,9 @@ export default function ServiBot() {
                   className="relative h-[82%] w-auto animate-float drop-shadow-[0_30px_40px_rgba(70,20,160,.45)]"
                 />
               </div>
+              <HandNote arrow="end" rotate={-4} className="absolute start-0 top-14 hidden sm:flex">
+                {t('notes.servibot')}
+              </HandNote>
               <div className="relative z-10">
                 <ChatWindow />
               </div>

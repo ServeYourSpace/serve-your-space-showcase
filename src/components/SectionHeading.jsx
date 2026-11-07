@@ -8,7 +8,6 @@ export default function SectionHeading({ eyebrow, title, description, align = 'c
     <div className={cn('max-w-3xl', align === 'center' ? 'mx-auto text-center' : 'text-start', className)}>
       {eyebrow && (
         <motion.p variants={fadeUp} initial="hidden" whileInView="show" viewport={viewport} className="eyebrow">
-          <span className="h-1.5 w-1.5 rounded-full bg-brand-500" aria-hidden />
           {eyebrow}
         </motion.p>
       )}

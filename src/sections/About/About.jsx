@@ -1,7 +1,7 @@
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import { Briefcase, Check, UserRound } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-import { fadeUp, stagger, viewport } from '../../animations/variants';
+import { fadeUp, flipIn, stagger, viewport } from '../../animations/variants';
 import AmbientGlow from '../../components/AmbientGlow';
 import PhoneFrame from '../../components/PhoneFrame';
 import ScreenImage from '../../components/ScreenImage';
@@ -92,6 +92,36 @@ export default function About() {
             screen={(dark) => (dark ? '/screenshots/dash_dark.webp' : '/screenshots/dash_light.webp')}
           />
         </motion.div>
+
+        {/* everyday moments: why the app exists, in plain words */}
+        <div className="mt-24 lg:mt-32">
+          <div className="flex flex-wrap items-end justify-between gap-4">
+            <h3 className="font-display text-3xl font-bold tracking-tight sm:text-4xl">{t('about.momentsTitle')}</h3>
+            <p className="text-sm text-muted">{t('about.momentsNote')}</p>
+          </div>
+          <motion.ul
+            variants={stagger(0.12)}
+            initial="hidden"
+            whileInView="show"
+            viewport={viewport}
+            className="mt-10 grid gap-6 md:grid-cols-3"
+          >
+            {t('about.moments').map((m, i) => (
+              <motion.li
+                key={m.time}
+                variants={flipIn}
+                custom={i}
+                whileHover={{ rotate: 0, y: -6, rotateX: 0 }}
+                style={{ rotate: [-2, 1.5, -1][i] }}
+                className="relative rounded-3xl bg-surface p-7 shadow-soft ring-1 ring-brand-500/10"
+              >
+                <span aria-hidden className="absolute -top-3 start-8 h-6 w-16 -rotate-3 rounded-sm bg-brand-300/50 dark:bg-brand-500/40" />
+                <p className="font-hand text-3xl text-brand-600 dark:text-brand-300">{m.time}</p>
+                <p className="mt-3 text-lg leading-relaxed">{m.text}</p>
+              </motion.li>
+            ))}
+          </motion.ul>
+        </div>
       </div>
     </section>
   );

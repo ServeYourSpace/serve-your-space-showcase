@@ -63,7 +63,7 @@ export default function Navbar() {
             scrolled && 'mt-2 h-[62px] w-[calc(100%-1rem)] rounded-full glass-strong shadow-soft sm:mt-3 sm:w-[calc(100%-2rem)]',
           )}
         >
-          <a href="#home" aria-label="ServeYourSpace" className="shrink-0 rounded-xl">
+          <a href="/#home" aria-label="ServeYourSpace" className="shrink-0 rounded-xl">
             <Logo className="hidden sm:inline-flex" />
             <Logo compact className="sm:hidden" />
           </a>
@@ -73,7 +73,7 @@ export default function Navbar() {
               {NAV_ITEMS.map((item) => (
                 <li key={item.id}>
                   <a
-                    href={`#${item.id}`}
+                    href={`/#${item.id}`}
                     aria-current={active === item.id ? 'true' : undefined}
                     className={cn(
                       'relative block rounded-full px-3.5 py-2 text-[0.9rem] font-medium transition-colors',
@@ -97,7 +97,7 @@ export default function Navbar() {
           <div className="flex items-center gap-2">
             <LanguageSelector className="hidden sm:block" />
             <ThemeToggle className="hidden sm:inline-flex" />
-            <Button href="#showcase" className="hidden !min-h-[44px] !px-5 !py-2.5 text-sm lg:inline-flex">
+            <Button href="/#download" className="hidden !min-h-[44px] !px-5 !py-2.5 text-sm lg:inline-flex">
               {t('nav.cta')}
             </Button>
             <button
@@ -156,7 +156,7 @@ export default function Navbar() {
                       transition={{ delay: 0.05 + i * 0.04 }}
                     >
                       <a
-                        href={`#${item.id}`}
+                        href={`/#${item.id}`}
                         onClick={() => setOpen(false)}
                         className={cn(
                           'flex min-h-[52px] items-center justify-between rounded-2xl px-4 font-display text-xl font-semibold transition',
@@ -179,7 +179,7 @@ export default function Navbar() {
                   <p className="text-xs font-semibold uppercase tracking-widest text-muted">{t('nav.theme')}</p>
                   <ThemeToggle withLabel />
                 </div>
-                <Button href="#showcase" onClick={() => setOpen(false)} className="mt-2 w-full">
+                <Button href="/#download" onClick={() => setOpen(false)} className="mt-2 w-full">
                   {t('nav.cta')}
                 </Button>
               </div>

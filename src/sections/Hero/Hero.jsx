@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { ease } from '../../animations/variants';
 import AnimatedWords from '../../components/AnimatedWords';
 import Button from '../../components/Button';
+import HandNote from '../../components/HandNote';
 import PhoneFrame from '../../components/PhoneFrame';
 import ScreenImage from '../../components/ScreenImage';
 import { useTheme } from '../../context/ThemeContext';
@@ -120,7 +121,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease }}
-            className="eyebrow"
+            className="eyebrow-pill"
           >
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-400 opacity-60" />
@@ -191,6 +192,10 @@ export default function Hero() {
               fallback
             )}
           </div>
+
+          <HandNote arrow="down-end" rotate={-7} className="absolute -top-4 start-[22%] z-20 hidden lg:flex">
+            {t('notes.hero')}
+          </HandNote>
 
           {/* floating UI cards (DOM, so text stays crisp and translatable) */}
           <div aria-hidden>

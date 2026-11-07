@@ -32,7 +32,11 @@
     "ctaPrimary": "Découvrir ServeYourSpace",
     "ctaSecondary": "Explorer les fonctionnalités",
     "scroll": "Faites défiler",
-    "trust": ["Clients & prestataires", "English · Français · العربية", "Mode clair & sombre"],
+    "trust": [
+      "Clients & prestataires",
+      "English · Français · العربية",
+      "Mode clair & sombre"
+    ],
     "sceneLabel": "Vue 3D de l'application ServeYourSpace sur un smartphone",
     "cards": {
       "categoryLabel": "Catégorie",
@@ -56,27 +60,27 @@
       {
         "kicker": "01 · L'application",
         "title": "Votre espace, dans votre poche.",
-        "text": "Créez votre profil en quelques étapes, choisissez votre espace client ou prestataire, et c'est parti."
+        "text": "Inscrivez-vous en deux minutes. Dites-nous si vous cherchez de l'aide ou si vous proposez vos services, et l'app s'adapte à vous."
       },
       {
         "kicker": "02 · Découverte",
         "title": "Le bon service en quelques secondes.",
-        "text": "Recherchez un service, parcourez les catégories ou ouvrez la carte des services pour voir ce qui est disponible autour de vous."
+        "text": "Un robinet qui fuit, une lumière qui clignote, un jardin à l'abandon ? Tapez-le, choisissez une catégorie ou ouvrez la carte pour voir qui est dans le coin."
       },
       {
         "kicker": "03 · Prestataires",
         "title": "Pensée aussi pour les professionnels.",
-        "text": "Les prestataires suivent leur objectif du jour, leur activité de la semaine, leurs missions terminées et leur historique depuis un tableau de bord dédié."
+        "text": "Plombiers, électriciens, femmes de ménage... chaque prestataire a son tableau de bord : objectif du jour, activité de la semaine, missions terminées et historique."
       },
       {
         "kicker": "04 · Demande & négociation",
         "title": "Demandez. Proposez. Tombez d'accord.",
-        "text": "Envoyez votre demande, recevez des propositions et ajustez le prix ensemble jusqu'à ce que l'accord convienne à tous."
+        "text": "Vous fixez un prix, les prestataires répondent. Pas assez ? Augmentez-le d'un geste. Tout le monde sait à quoi s'en tenir avant même de sonner à la porte."
       },
       {
         "kicker": "05 · ServiBot",
         "title": "Et un assistant qui vous écoute.",
-        "text": "Décrivez votre besoin avec vos mots. ServiBot vous oriente vers le bon type de professionnel, près de chez vous."
+        "text": "Vous ne savez pas qui appeler ? Racontez à ServiBot ce qui se passe, avec vos mots. Il vous oriente vers le bon pro, près de chez vous."
       }
     ]
   },
@@ -107,7 +111,23 @@
         "Organiser son activité",
         "Gérer ses services professionnels"
       ]
-    }
+    },
+    "momentsTitle": "La vraie vie, de vrais besoins.",
+    "moments": [
+      {
+        "time": "Dimanche, 21 h 40",
+        "text": "De l'eau sous l'évier. Un plombier pas loin, sans appeler dix numéros."
+      },
+      {
+        "time": "Samedi matin",
+        "text": "Des invités ce soir, la maison sens dessus dessous. Le ménage est réservé avant que le café soit prêt."
+      },
+      {
+        "time": "Lundi, 7 h 00",
+        "text": "Un prestataire ouvre l'app, regarde son objectif du jour et accepte la première demande."
+      }
+    ],
+    "momentsNote": "Des situations du quotidien, celles pour lesquelles l'app est faite."
   },
   "showcase": {
     "eyebrow": "L'application mobile",
@@ -118,29 +138,74 @@
     "prev": "Écran précédent",
     "next": "Écran suivant",
     "screens": {
-      "home": { "title": "Accueil", "desc": "Un accueil personnalisé, la recherche de services et un accès rapide à la carte et aux catégories." },
-      "categories": { "title": "Catégories de services", "desc": "Plomberie, électricité, ménage, jardinage et plus, chacune avec sa propre page." },
-      "negotiation": { "title": "Demande & négociation du prix", "desc": "Les propositions arrivent, et le prix peut être augmenté en un geste grâce aux montants suggérés." },
-      "chat": { "title": "Messagerie", "desc": "Clients et prestataires échangent en temps réel autour de chaque mission." },
-      "dashboard": { "title": "Tableau de bord prestataire", "desc": "Objectif du jour, activité de la semaine, missions terminées et en cours, historique et solde." },
-      "servibot": { "title": "Assistant IA ServiBot", "desc": "Un assistant conversationnel avec des suggestions rapides pour trouver le bon prestataire." },
-      "profile": { "title": "Profil", "desc": "Informations personnelles, coordonnées et réglages du compte au même endroit." },
-      "signup": { "title": "Inscription", "desc": "Une création de profil guidée en trois petites étapes." },
-      "otp": { "title": "Vérification de l'e-mail", "desc": "Un code à 6 chiffres envoyé par e-mail sécurise chaque nouveau compte." },
-      "settings": { "title": "Trois langues", "desc": "L'app parle français, anglais et arabe, avec une prise en charge complète de la droite vers la gauche." },
-      "menu": { "title": "Navigation", "desc": "Demandes, messages, notifications, paiements et transactions, à portée de doigt." }
+      "home": {
+        "title": "Accueil",
+        "desc": "Un accueil personnalisé, la recherche de services et un accès rapide à la carte et aux catégories."
+      },
+      "categories": {
+        "title": "Catégories de services",
+        "desc": "Plomberie, électricité, ménage, jardinage et plus, chacune avec sa propre page."
+      },
+      "negotiation": {
+        "title": "Demande & négociation du prix",
+        "desc": "Les propositions arrivent, et le prix peut être augmenté en un geste grâce aux montants suggérés."
+      },
+      "chat": {
+        "title": "Messagerie",
+        "desc": "Clients et prestataires échangent en temps réel autour de chaque mission."
+      },
+      "dashboard": {
+        "title": "Tableau de bord prestataire",
+        "desc": "Objectif du jour, activité de la semaine, missions terminées et en cours, historique et solde."
+      },
+      "servibot": {
+        "title": "Assistant IA ServiBot",
+        "desc": "Un assistant conversationnel avec des suggestions rapides pour trouver le bon prestataire."
+      },
+      "profile": {
+        "title": "Profil",
+        "desc": "Informations personnelles, coordonnées et réglages du compte au même endroit."
+      },
+      "signup": {
+        "title": "Inscription",
+        "desc": "Une création de profil guidée en trois petites étapes."
+      },
+      "otp": {
+        "title": "Vérification de l'e-mail",
+        "desc": "Un code à 6 chiffres envoyé par e-mail sécurise chaque nouveau compte."
+      },
+      "settings": {
+        "title": "Trois langues",
+        "desc": "L'app parle français, anglais et arabe, avec une prise en charge complète de la droite vers la gauche."
+      },
+      "menu": {
+        "title": "Navigation",
+        "desc": "Demandes, messages, notifications, paiements et transactions, à portée de doigt."
+      }
     }
   },
   "servibot": {
     "eyebrow": "Assistant IA",
     "title1": "Voici ServiBot.",
     "title2": "Votre compagnon de services intelligent.",
-    "description": "ServiBot vit dans l'application ServeYourSpace. Au lieu de chercher dans les menus, vous lui dites simplement ce dont vous avez besoin, et il vous aide à avancer.",
+    "description": "ServiBot, c'est le petit robot qui vit dans l'application. Au lieu de fouiller dans les menus, vous lui dites ce qui ne va pas, comme à un ami, et il vous aide à passer à l'étape suivante.",
     "capabilities": [
-      { "title": "Parlez naturellement", "text": "Écrivez votre demande comme vous la diriez. Pas de mots-clés, pas de formulaire." },
-      { "title": "Trouver un prestataire", "text": "Demandez un professionnel et ServiBot vous oriente vers le bon type de prestataire." },
-      { "title": "Près de chez vous", "text": "Besoin de quelqu'un à proximité ? Demandez à ServiBot les prestataires autour de votre position." },
-      { "title": "Décrire un problème", "text": "Vous ne savez pas qui appeler ? Décrivez le problème et ServiBot vous aide à y voir clair." }
+      {
+        "title": "Parlez naturellement",
+        "text": "Écrivez votre demande comme vous la diriez. Pas de mots-clés, pas de formulaire."
+      },
+      {
+        "title": "Trouver un prestataire",
+        "text": "Demandez un professionnel et ServiBot vous oriente vers le bon type de prestataire."
+      },
+      {
+        "title": "Près de chez vous",
+        "text": "Besoin de quelqu'un à proximité ? Demandez à ServiBot les prestataires autour de votre position."
+      },
+      {
+        "title": "Décrire un problème",
+        "text": "Vous ne savez pas qui appeler ? Décrivez le problème et ServiBot vous aide à y voir clair."
+      }
     ],
     "chat": {
       "name": "ServiBot",
@@ -153,9 +218,18 @@
       "placeholder": "Tapez votre message...",
       "send": "Envoyer",
       "suggestions": [
-        { "title": "Prestataire", "text": "Besoin d'un prestataire pour vous aider ?" },
-        { "title": "Position", "text": "Un prestataire près de chez vous ?" },
-        { "title": "Décrire un problème", "text": "J'ai un problème et je ne sais pas vers qui me tourner." }
+        {
+          "title": "Prestataire",
+          "text": "Besoin d'un prestataire pour vous aider ?"
+        },
+        {
+          "title": "Position",
+          "text": "Un prestataire près de chez vous ?"
+        },
+        {
+          "title": "Décrire un problème",
+          "text": "J'ai un problème et je ne sais pas vers qui me tourner."
+        }
       ]
     }
   },
@@ -166,16 +240,126 @@
     "explore": "Voir les prestataires",
     "more": "Et bien plus dans l'application",
     "items": {
-      "plumbing": { "name": "Plomberie", "desc": "Fuites, installations et réparations par des plombiers près de chez vous." },
-      "electrical": { "name": "Électricité", "desc": "Câblage, prises, éclairage et pannes, réalisés en toute sécurité." },
-      "painting": { "name": "Peinture", "desc": "Murs, plafonds et finitions pour donner un nouveau visage à votre espace." },
-      "cleaning": { "name": "Ménage", "desc": "Le ménage à votre rythme, du simple rafraîchissement au grand nettoyage." },
-      "carpentry": { "name": "Menuiserie", "desc": "Portes, meubles et boiseries, fabriqués et réparés avec soin." },
-      "gardening": { "name": "Jardinage", "desc": "Pelouses, plantes et extérieurs entretenus toute l'année." },
-      "maintenance": { "name": "Entretien & réparations", "desc": "Vitrerie et petites réparations pour que tout fonctionne." },
-      "tutoring": { "name": "Cours particuliers", "desc": "Des cours à domicile avec des enseignants qui s'adaptent à vous." },
-      "hairdressing": { "name": "Coiffeur à domicile", "desc": "Une coupe et un coiffage professionnels sans sortir de chez vous." },
-      "coaching": { "name": "Coach sportif", "desc": "Des séances personnalisées, où et quand vous voulez." }
+      "plumbing": {
+        "name": "Plomberie",
+        "desc": "Fuites, installations et réparations par des plombiers près de chez vous.",
+        "long": "Un robinet qui goutte, une canalisation bouchée ou une fuite sous l'évier : les problèmes de plomberie n'attendent jamais. Décrivez le souci, fixez votre prix et recevez les propositions des plombiers près de chez vous.",
+        "tasks": [
+          "Fuites et robinets qui gouttent",
+          "Éviers, WC et canalisations bouchés",
+          "Pose de robinets, lavabos et chauffe-eau",
+          "Réparations salle de bain et cuisine"
+        ],
+        "ask": "J'ai une fuite sous l'évier de la cuisine."
+      },
+      "electrical": {
+        "name": "Électricité",
+        "desc": "Câblage, prises, éclairage et pannes, réalisés en toute sécurité.",
+        "long": "Une prise morte, une lumière qui clignote ou un disjoncteur qui saute sans arrêt : faites appel à un électricien qui connaît son métier et travaille en sécurité.",
+        "tasks": [
+          "Prises, interrupteurs et éclairage",
+          "Disjoncteurs et fusibles",
+          "Recherche de panne et réparation",
+          "Pose de luminaires et petit équipement"
+        ],
+        "ask": "Les lumières du salon n'arrêtent pas de clignoter."
+      },
+      "painting": {
+        "name": "Peinture",
+        "desc": "Murs, plafonds et finitions pour donner un nouveau visage à votre espace.",
+        "long": "Rafraîchir une pièce, cacher de vieilles taches ou changer l'ambiance de toute la maison, avec un peintre qui soigne les détails.",
+        "tasks": [
+          "Murs et plafonds intérieurs",
+          "Portes, encadrements et boiseries",
+          "Préparation, rebouchage et ponçage",
+          "Retouches après travaux"
+        ],
+        "ask": "Je veux repeindre ma chambre cette semaine."
+      },
+      "cleaning": {
+        "name": "Ménage",
+        "desc": "Le ménage à votre rythme, du simple rafraîchissement au grand nettoyage.",
+        "long": "Ménage régulier, grand nettoyage avant l'arrivée d'invités ou après un déménagement : réservez de l'aide à votre rythme.",
+        "tasks": [
+          "Ménage régulier",
+          "Grand nettoyage",
+          "Nettoyage après déménagement ou travaux",
+          "Cuisine et salle de bain"
+        ],
+        "ask": "J'ai besoin d'un ménage complet avant samedi."
+      },
+      "carpentry": {
+        "name": "Menuiserie",
+        "desc": "Portes, meubles et boiseries, fabriqués et réparés avec soin.",
+        "long": "Une porte qui coince, un placard à réparer ou un meuble à monter : les menuisiers travaillent le bois avec soin et précision.",
+        "tasks": [
+          "Réglage de portes et fenêtres",
+          "Réparation et montage de meubles",
+          "Étagères et rangements",
+          "Travaux du bois sur mesure"
+        ],
+        "ask": "La porte de mon armoire est sortie de ses gonds."
+      },
+      "gardening": {
+        "name": "Jardinage",
+        "desc": "Pelouses, plantes et extérieurs entretenus toute l'année.",
+        "long": "Pelouse, haies, plantes ou jardin laissé à l'abandon : un jardinier garde votre extérieur sain et beau.",
+        "tasks": [
+          "Tonte et taille des haies",
+          "Plantations et entretien de saison",
+          "Nettoyage du jardin",
+          "Arrosage et entretien"
+        ],
+        "ask": "Mon jardin a besoin d'un grand nettoyage."
+      },
+      "maintenance": {
+        "name": "Entretien & réparations",
+        "desc": "Vitrerie et petites réparations pour que tout fonctionne.",
+        "long": "Une vitre cassée, une poignée qui lâche, des petits travaux qui s'accumulent : trouvez quelqu'un pour les réparations qui font tourner la maison.",
+        "tasks": [
+          "Vitrerie et réparation de fenêtres",
+          "Petites réparations dans la maison",
+          "Fixations et montages",
+          "Entretien général"
+        ],
+        "ask": "Une vitre de mon salon est fissurée."
+      },
+      "tutoring": {
+        "name": "Cours particuliers",
+        "desc": "Des cours à domicile avec des enseignants qui s'adaptent à vous.",
+        "long": "Aide aux devoirs, préparation d'examen ou nouvelle matière : des cours à domicile avec un enseignant qui s'adapte à l'élève.",
+        "tasks": [
+          "Aide aux devoirs",
+          "Préparation aux examens",
+          "Langues",
+          "Maths et sciences"
+        ],
+        "ask": "Je cherche un prof de maths pour mon fils."
+      },
+      "hairdressing": {
+        "name": "Coiffeur à domicile",
+        "desc": "Une coupe et un coiffage professionnels sans sortir de chez vous.",
+        "long": "Une coupe, un brushing ou une coiffure pour un événement, sans sortir de chez vous et à l'heure qui vous arrange.",
+        "tasks": [
+          "Coupes",
+          "Brushing et coiffage",
+          "Coiffures d'événement",
+          "À domicile, à votre heure"
+        ],
+        "ask": "Je voudrais une coupe à domicile dimanche."
+      },
+      "coaching": {
+        "name": "Coach sportif",
+        "desc": "Des séances personnalisées, où et quand vous voulez.",
+        "long": "Reprendre la forme, préparer un objectif ou simplement bouger plus, avec un coach qui construit les séances autour de vous.",
+        "tasks": [
+          "Séances de coaching personnalisées",
+          "Remise en forme et renforcement",
+          "Programmes de perte de poids",
+          "À domicile ou en extérieur"
+        ],
+        "ask": "Je veux un coach pour m'entraîner deux fois par semaine."
+      }
     }
   },
   "how": {
@@ -184,25 +368,62 @@
     "description": "De la première recherche au travail terminé, ServeYourSpace reste simple.",
     "step": "Étape",
     "steps": [
-      { "label": "Découvrir", "title": "Trouvez le service dont vous avez besoin.", "text": "Recherchez, parcourez les catégories ou demandez à ServiBot." },
-      { "label": "Contacter", "title": "Entrez en contact avec le bon prestataire.", "text": "Choisissez un professionnel près de chez vous et envoyez votre demande." },
-      { "label": "Négocier", "title": "Échangez sur vos besoins et négociez les détails du service.", "text": "Discutez, recevez des propositions et convenez d'un prix juste." },
-      { "label": "Profiter", "title": "Votre service est réalisé.", "text": "Suivez la mission jusqu'à ce qu'elle soit marquée comme terminée." }
+      {
+        "label": "Découvrir",
+        "title": "Trouvez le service dont vous avez besoin.",
+        "text": "Recherchez, parcourez les catégories ou demandez simplement à ServiBot."
+      },
+      {
+        "label": "Contacter",
+        "title": "Entrez en contact avec le bon prestataire.",
+        "text": "Choisissez un professionnel près de chez vous et envoyez votre demande."
+      },
+      {
+        "label": "Négocier",
+        "title": "Échangez sur vos besoins et négociez les détails du service.",
+        "text": "Discutez, comparez les propositions et mettez-vous d'accord sur un prix juste."
+      },
+      {
+        "label": "Profiter",
+        "title": "Votre service est réalisé.",
+        "text": "Travail terminé ? La mission est clôturée et vous reprenez le cours de votre journée."
+      }
     ]
   },
   "vision": {
     "eyebrow": "Notre vision",
     "title": "Inventer une façon plus intelligente de vivre les services du quotidien.",
-    "intro": "ServeYourSpace est une jeune startup technologique portée par une conviction simple : se faire aider chez soi devrait être aussi facile qu'envoyer un message.",
-    "mission": { "label": "Notre mission", "text": "Simplifier l'accès aux services du quotidien grâce à une plateforme numérique accessible, connectée et intelligente." },
-    "vision": { "label": "Notre vision", "text": "Construire un écosystème plus intelligent qui relie clients et prestataires grâce à la technologie et à l'innovation." },
+    "intro": "Trouver un pro fiable ne devrait pas demander cinq coups de fil et un service rendu par le voisin. Pour nous, se faire aider chez soi devrait être aussi simple qu'envoyer un message.",
+    "mission": {
+      "label": "Notre mission",
+      "text": "Simplifier l'accès aux services du quotidien grâce à une plateforme numérique accessible, connectée et intelligente."
+    },
+    "vision": {
+      "label": "Notre vision",
+      "text": "Construire un écosystème plus intelligent qui relie clients et prestataires grâce à la technologie et à l'innovation."
+    },
     "valuesTitle": "Nos valeurs",
     "values": [
-      { "name": "Innovation", "text": "Nous utilisons la technologie, IA comprise, là où elle simplifie vraiment la vie." },
-      { "name": "Simplicité", "text": "Chaque écran est pensé pour être compris au premier coup d'œil." },
-      { "name": "Confiance", "text": "Des comptes vérifiés et des échanges clairs entre clients et prestataires." },
-      { "name": "Accessibilité", "text": "Trois langues, un mode clair et un mode sombre, pour tout le monde." },
-      { "name": "Transformation numérique", "text": "Faire entrer les services du quotidien dans l'ère numérique." }
+      {
+        "name": "Innovation",
+        "text": "Nous utilisons la technologie, IA comprise, là où elle simplifie vraiment la vie."
+      },
+      {
+        "name": "Simplicité",
+        "text": "Chaque écran est pensé pour être compris au premier coup d'œil."
+      },
+      {
+        "name": "Confiance",
+        "text": "Des comptes vérifiés et des échanges clairs entre clients et prestataires."
+      },
+      {
+        "name": "Accessibilité",
+        "text": "Trois langues, un mode clair et un mode sombre, pour tout le monde."
+      },
+      {
+        "name": "Transformation numérique",
+        "text": "Faire entrer les services du quotidien dans l'ère numérique."
+      }
     ]
   },
   "cta": {
@@ -222,13 +443,25 @@
     "app": "L'application",
     "email": "E-mail",
     "rights": "Tous droits réservés.",
-    "backToTop": "Retour en haut"
+    "backToTop": "Retour en haut",
+    "services": "Nos services",
+    "becomePro": "Devenir prestataire",
+    "pro": "PRO !",
+    "follow": "Suivez-nous",
+    "downloadTitle": "Téléchargez l'application ServeYourSpace pour une meilleure expérience !"
   },
   "mock": {
     "categories": {
       "title": "Nos services",
       "search": "Rechercher un service...",
-      "items": ["Plombier", "Électricien", "Menuisier", "Peintre", "Ménage", "Jardinier"]
+      "items": [
+        "Plombier",
+        "Électricien",
+        "Menuisier",
+        "Peintre",
+        "Ménage",
+        "Jardinier"
+      ]
     },
     "negotiation": {
       "title": "Ma demande",
@@ -253,5 +486,40 @@
   "a11y": {
     "phoneOf": "Écran : {{name}}",
     "decorative": ""
+  },
+  "notes": {
+    "hero": "c'est la vraie app, pas une maquette !",
+    "showcase": "vas-y, fais-moi glisser",
+    "servibot": "il ne mord pas, promis",
+    "services": "pas trouvé ? demande à ServiBot",
+    "download": "bientôt dans ta poche"
+  },
+  "download": {
+    "eyebrow": "L'application",
+    "title": "Téléchargez l'application ServeYourSpace pour une meilleure expérience !",
+    "description": "Trouvez un professionnel, suivez vos demandes et discutez avec ServiBot, où que vous soyez.",
+    "soon": "Bientôt",
+    "appStoreTop": "Télécharger dans l'",
+    "playTop": "DISPONIBLE SUR",
+    "phonesLabel": "Trois écrans de l'application ServeYourSpace"
+  },
+  "detail": {
+    "back": "Tous les services",
+    "overview": "À propos de ce service",
+    "includes": "Ce que les prestataires peuvent faire",
+    "providers": "Prestataires",
+    "providersCount_one": "{{count}} prestataire inscrit",
+    "providersCount_other": "{{count}} prestataires inscrits",
+    "providersLive": "Chiffre en direct de la plateforme ServeYourSpace",
+    "providersSoon": "Prestataires disponibles dans l'app",
+    "providersHint": "Ouvrez l'application pour voir qui est disponible autour de vous en ce moment.",
+    "how": "Comment ça marche pour ce service",
+    "askBot": "Ou demandez simplement à ServiBot",
+    "related": "Autres services",
+    "ctaTitle": "Besoin de ça aujourd'hui ?",
+    "ctaText": "Téléchargez l'app, décrivez votre besoin et recevez les propositions des prestataires près de chez vous.",
+    "notFound": "Ce service n'existe pas (encore).",
+    "home": "Retour à l'accueil",
+    "photo": "Photo : {{name}}"
   }
 }

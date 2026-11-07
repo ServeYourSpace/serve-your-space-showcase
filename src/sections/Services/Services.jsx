@@ -1,10 +1,14 @@
 import { motion, useMotionTemplate, useMotionValue, useSpring } from 'framer-motion';
 import { ArrowUpRight, Dumbbell, GraduationCap, Hammer, House, PaintRoller, Scissors, Sparkles, Sprout, Wrench, Zap } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
+import HandNote from '../../components/HandNote';
 import { fadeUp, stagger, viewport } from '../../animations/variants';
 import AmbientGlow from '../../components/AmbientGlow';
 import SectionHeading from '../../components/SectionHeading';
-import { SERVICES } from '../../data/services';
+import { SERVICES, servicePath } from '../../data/services';
+
+const MotionLink = motion.create(Link);
 import { cn } from '../../utils/cn';
 
 const ICONS = { Wrench, Zap, PaintRoller, Sparkles, Hammer, Sprout, House, GraduationCap, Scissors, Dumbbell };
@@ -40,7 +44,8 @@ function ServiceCard({ item, index, t }) {
   };
 
   return (
-    <motion.article
+    <MotionLink
+      to={servicePath(item.key)}
       variants={fadeUp}
       custom={index % 4}
       onPointerMove={onMove}
@@ -85,7 +90,7 @@ function ServiceCard({ item, index, t }) {
 
       <h3 className={cn('font-display font-bold leading-tight', big ? 'text-3xl sm:text-4xl' : 'text-xl')}>{t(`services.items.${item.key}.name`)}</h3>
       <p className={cn('mt-2 max-w-sm leading-relaxed text-white/80', big ? 'text-base' : 'text-sm')}>{t(`services.items.${item.key}.desc`)}</p>
-    </motion.article>
+    </MotionLink>
   );
 }
 
@@ -97,7 +102,12 @@ export default function Services() {
     <section id="services" aria-labelledby="services-title" className="section isolate overflow-hidden">
       <AmbientGlow variant="right" />
       <div className="container">
-        <SectionHeading id="services-title" eyebrow={t('services.eyebrow')} title={t('services.title')} description={t('services.description')} />
+        <div className="relative">
+          <SectionHeading id="services-title" eyebrow={t('services.eyebrow')} title={t('services.title')} description={t('services.description')} />
+          <HandNote arrow="down-end" rotate={5} className="absolute -bottom-14 end-0 hidden lg:flex">
+            {t('notes.services')}
+          </HandNote>
+        </div>
 
         <motion.div
           variants={stagger(0.06)}
@@ -117,7 +127,7 @@ export default function Services() {
             <div aria-hidden className="absolute -end-2 -top-2 h-32 w-32 rounded-full border border-white/20" />
             <img src="/logo/sys-icon-white.png" alt="" aria-hidden className="absolute bottom-6 end-7 h-16 w-auto opacity-25" />
             <p className="font-display text-2xl font-bold sm:text-3xl">{t('services.more')}</p>
-            <a href="#showcase" className="mt-4 inline-flex w-max items-center gap-2 rounded-full bg-white/15 px-4 py-2 text-sm font-semibold backdrop-blur transition hover:bg-white/25">
+            <a href="#download" className="mt-4 inline-flex w-max items-center gap-2 rounded-full bg-white/15 px-4 py-2 text-sm font-semibold backdrop-blur transition hover:bg-white/25">
               {t('nav.cta')}
               <ArrowUpRight aria-hidden className="h-4 w-4 rtl:-scale-x-100" />
             </a>

@@ -129,13 +129,32 @@
     background-clip: text;
   }
 
+  /* Section label: a short rule + text (lighter than the usual pill badge). */
   .eyebrow {
-    @apply inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-brand-600 dark:text-brand-200;
+    @apply inline-flex items-center gap-3 text-sm font-semibold text-brand-600 dark:text-brand-300;
+  }
+  .eyebrow::before {
+    content: '';
+    width: 28px;
+    height: 2px;
+    border-radius: 2px;
+    background: currentColor;
+  }
+  .eyebrow-pill {
+    @apply inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 text-sm font-semibold text-brand-600 dark:text-brand-200;
     background: rgb(138 71 250 / 0.1);
     border: 1px solid rgb(138 71 250 / 0.22);
   }
-  html[lang='ar'] .eyebrow {
-    letter-spacing: 0;
+
+  /* Handwritten notes: a human touch next to the product visuals. */
+  .font-hand {
+    font-family: 'Caveat', cursive;
+    font-weight: 600;
+    line-height: 1.05;
+  }
+  html[lang='ar'] .font-hand {
+    font-family: 'Aref Ruqaa', 'IBM Plex Sans Arabic', serif;
+    font-weight: 700;
   }
 
   .section {

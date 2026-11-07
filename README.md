@@ -15,7 +15,8 @@ ServeYourSpace (SYS) is a mobile services marketplace that connects customers wi
 - **3D hero**: a WebGL smartphone (React Three Fiber) showing real app screenshots, two smaller phones, purple particles, studio lighting, mouse-driven rotation and floating UI cards with parallax. Lazy-loaded, paused when offscreen, with a CSS fallback when WebGL is unavailable.
 - **Cinematic scroll storytelling** (GSAP ScrollTrigger): a pinned section where the phone rotates in, then moves through five chapters (the app → discovery → providers → request & negotiation → ServiBot) with screen transitions and lighting changes.
 - **App showcase**: a 3D carousel of 11 screens (drag, arrows, keyboard, chips).
-- Sections: About (customers / providers), ServiBot (animated conversation), Services (bento grid with 3D tilt), How it works (scroll-drawn timeline), Our vision, Final call to action, Footer.
+- Sections: About (customers / providers, everyday moments), ServiBot (animated conversation), Services (bento grid with 3D tilt), How it works (scroll-drawn timeline), Our vision, Final call to action, Download (App Store / Google Play badges + 3D phone fan), Footer.
+- **A page per service** (`/services/plumbing`, `/services/electrical`, ...): description, what providers can help with, steps, a ServiBot example, other services.
 - **Three languages**: English (default), Français, العربية, with full right-to-left layout for Arabic. Choice saved in `localStorage`.
 - **Dark / light mode**: follows the system preference on first visit, then the visitor's choice (saved). One set of components themed through CSS variables.
 - Responsive from 320 px phones to large desktops, touch-friendly controls, reduced-motion support, skip link, keyboard-accessible menus.
@@ -97,6 +98,16 @@ src/
   utils/
   App.jsx, main.jsx
 ```
+
+## Store links, social links and provider counts
+
+- **App Store / Google Play**: put the store URLs in `src/data/links.js`. While a URL is empty the badge shows a “Soon” ribbon and is not clickable.
+- **Social networks**: same file, `SOCIAL_LINKS`. Only icons with a URL are shown in the footer.
+- **Number of providers per service**: the site never shows an invented figure. Copy `.env.example` to `.env` and set `VITE_STATS_URL` to a public endpoint returning `{ "Plombier": 12, ... }` (keys = service names in the app catalogue, or the site keys such as `plumbing`). Without it, service pages say “Providers available in the app”.
+
+## Routing and hosting
+
+The site uses client-side routes (`/services/:key`). `npm run build` also writes `dist/404.html`, and the repository contains `public/_redirects` (Netlify) and `vercel.json`, so direct links to service pages work on those hosts.
 
 ## Common changes
 

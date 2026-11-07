@@ -36,7 +36,6 @@ export default function Vision() {
         <div className="grid gap-10 lg:grid-cols-[1.3fr_1fr] lg:items-end">
           <div>
             <motion.p variants={fadeUp} initial="hidden" whileInView="show" viewport={viewport} className="eyebrow">
-              <span className="h-1.5 w-1.5 rounded-full bg-brand-500" aria-hidden />
               {t('vision.eyebrow')}
             </motion.p>
             <AnimatedWords

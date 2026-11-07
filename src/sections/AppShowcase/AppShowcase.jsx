@@ -4,6 +4,7 @@ import { useCallback, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ease } from '../../animations/variants';
 import AmbientGlow from '../../components/AmbientGlow';
+import HandNote from '../../components/HandNote';
 import PhoneFrame from '../../components/PhoneFrame';
 import ScreenContent from '../../components/ScreenContent';
 import SectionHeading from '../../components/SectionHeading';
@@ -57,6 +58,9 @@ export default function AppShowcase() {
             onKeyDown={onKey}
             className="perspective relative mx-auto flex h-[480px] max-w-5xl items-center justify-center rounded-4xl sm:h-[600px] lg:h-[660px]"
           >
+            <HandNote arrow="down-end" rotate={-6} className="absolute -top-6 end-[6%] z-30 hidden md:flex">
+              {t('notes.showcase')}
+            </HandNote>
             {/* floor reflection */}
             <div aria-hidden className="absolute bottom-0 h-24 w-[70%] rounded-[100%] bg-brand-500/25 blur-3xl" />
 

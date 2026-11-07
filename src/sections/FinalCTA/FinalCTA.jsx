@@ -43,7 +43,7 @@ export default function FinalCTA() {
             {t('cta.description')}
           </motion.p>
           <motion.div variants={fadeUp} custom={3} initial="hidden" whileInView="show" viewport={viewport} className="mt-10 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
-            <Button href="#showcase" variant="light">
+            <Button href="#download" variant="light">
               {t('cta.primary')}
             </Button>
             <Button href={`mailto:${CONTACT_EMAIL}`} variant="ghost" icon={false} className="!border-white/30 !bg-white/10 !text-white hover:!bg-white/20">

@@ -32,7 +32,11 @@
     "ctaPrimary": "Discover ServeYourSpace",
     "ctaSecondary": "Explore Our Features",
     "scroll": "Scroll to explore",
-    "trust": ["Customers & providers", "English · Français · العربية", "Light & dark mode"],
+    "trust": [
+      "Customers & providers",
+      "English · Français · العربية",
+      "Light & dark mode"
+    ],
     "sceneLabel": "3D view of the ServeYourSpace app on a smartphone",
     "cards": {
       "categoryLabel": "Category",
@@ -56,27 +60,27 @@
       {
         "kicker": "01 · The app",
         "title": "Your space, in your pocket.",
-        "text": "Create your profile in a few steps, choose your space as a customer or a provider, and you are ready to go."
+        "text": "Sign up in a couple of minutes. Tell us whether you're here to find help or to offer your skills, and the app adapts to you."
       },
       {
         "kicker": "02 · Discovery",
         "title": "Find the right service in seconds.",
-        "text": "Search for a service, browse categories or open the service map to see what is available around you."
+        "text": "Leaking tap, flickering light, garden gone wild? Type it, tap a category or open the map to see who's around."
       },
       {
         "kicker": "03 · Providers",
         "title": "Built for the professionals too.",
-        "text": "Providers follow their daily goal, weekly activity, completed missions and history from a dedicated dashboard."
+        "text": "Plumbers, electricians, cleaners... every provider gets a dashboard with the day's goal, the week's activity, finished jobs and history."
       },
       {
         "kicker": "04 · Request & negotiate",
         "title": "Ask. Propose. Agree.",
-        "text": "Send your request, receive proposals and adjust the price together until the deal feels right on both sides."
+        "text": "You set a price, providers answer. Not enough? Raise it in one tap. Everyone knows where they stand before anyone rings the bell."
       },
       {
         "kicker": "05 · ServiBot",
         "title": "And an assistant that listens.",
-        "text": "Describe your need in your own words. ServiBot points you to the right kind of professional, close to you."
+        "text": "Not sure who to call? Tell ServiBot what's going on, in your own words. It points you to the right kind of pro nearby."
       }
     ]
   },
@@ -107,7 +111,23 @@
         "Organize their activities",
         "Manage their professional services"
       ]
-    }
+    },
+    "momentsTitle": "Real life, real needs.",
+    "moments": [
+      {
+        "time": "Sunday, 9:40 pm",
+        "text": "Water under the sink. A plumber nearby, without calling ten numbers."
+      },
+      {
+        "time": "Saturday morning",
+        "text": "Guests tonight, house upside down. Cleaning booked before the coffee is ready."
+      },
+      {
+        "time": "Monday, 7:00 am",
+        "text": "A provider opens the app, checks today's goal and accepts the first request."
+      }
+    ],
+    "momentsNote": "Everyday situations the app is made for."
   },
   "showcase": {
     "eyebrow": "The mobile app",
@@ -118,29 +138,74 @@
     "prev": "Previous screen",
     "next": "Next screen",
     "screens": {
-      "home": { "title": "Home", "desc": "A personal welcome, service search and quick access to the service map and categories." },
-      "categories": { "title": "Service categories", "desc": "Plumbing, electrical work, cleaning, gardening and more, each with its own page." },
-      "negotiation": { "title": "Request & price negotiation", "desc": "Proposals come in, and the price can be raised in one tap with suggested amounts." },
-      "chat": { "title": "Messaging", "desc": "Customers and providers talk in real time about every mission." },
-      "dashboard": { "title": "Provider dashboard", "desc": "Daily goal, weekly activity, completed and ongoing missions, history and balance." },
-      "servibot": { "title": "ServiBot AI assistant", "desc": "A conversational assistant with quick suggestions to find the right provider." },
-      "profile": { "title": "Profile", "desc": "Personal information, contact details and account settings in one place." },
-      "signup": { "title": "Sign-up", "desc": "A guided profile creation in three short steps." },
-      "otp": { "title": "Email verification", "desc": "A 6-digit code sent by email secures every new account." },
-      "settings": { "title": "Three languages", "desc": "The app speaks French, English and Arabic, with full right-to-left support." },
-      "menu": { "title": "Navigation", "desc": "Requests, messages, notifications, payments and transactions, one tap away." }
+      "home": {
+        "title": "Home",
+        "desc": "A personal welcome, service search and quick access to the service map and categories."
+      },
+      "categories": {
+        "title": "Service categories",
+        "desc": "Plumbing, electrical work, cleaning, gardening and more, each with its own page."
+      },
+      "negotiation": {
+        "title": "Request & price negotiation",
+        "desc": "Proposals come in, and the price can be raised in one tap with suggested amounts."
+      },
+      "chat": {
+        "title": "Messaging",
+        "desc": "Customers and providers talk in real time about every mission."
+      },
+      "dashboard": {
+        "title": "Provider dashboard",
+        "desc": "Daily goal, weekly activity, completed and ongoing missions, history and balance."
+      },
+      "servibot": {
+        "title": "ServiBot AI assistant",
+        "desc": "A conversational assistant with quick suggestions to find the right provider."
+      },
+      "profile": {
+        "title": "Profile",
+        "desc": "Personal information, contact details and account settings in one place."
+      },
+      "signup": {
+        "title": "Sign-up",
+        "desc": "A guided profile creation in three short steps."
+      },
+      "otp": {
+        "title": "Email verification",
+        "desc": "A 6-digit code sent by email secures every new account."
+      },
+      "settings": {
+        "title": "Three languages",
+        "desc": "The app speaks French, English and Arabic, with full right-to-left support."
+      },
+      "menu": {
+        "title": "Navigation",
+        "desc": "Requests, messages, notifications, payments and transactions, one tap away."
+      }
     }
   },
   "servibot": {
     "eyebrow": "AI assistant",
     "title1": "Meet ServiBot.",
     "title2": "Your Intelligent Service Companion.",
-    "description": "ServiBot lives inside the ServeYourSpace app. Instead of searching through menus, you simply tell it what you need, and it helps you move forward.",
+    "description": "ServiBot is the little robot who lives in the app. Instead of digging through menus, you just tell it what's wrong, like you would tell a friend, and it helps you take the next step.",
     "capabilities": [
-      { "title": "Talk naturally", "text": "Write your request the way you would say it. No keywords, no forms." },
-      { "title": "Find a provider", "text": "Ask for a professional and ServiBot guides you to the right type of provider." },
-      { "title": "Close to you", "text": "Looking for someone nearby? Ask ServiBot for providers around your position." },
-      { "title": "Describe a problem", "text": "Not sure who to call? Describe the problem and ServiBot helps you figure it out." }
+      {
+        "title": "Talk naturally",
+        "text": "Write your request the way you would say it. No keywords, no forms."
+      },
+      {
+        "title": "Find a provider",
+        "text": "Ask for a professional and ServiBot guides you to the right type of provider."
+      },
+      {
+        "title": "Close to you",
+        "text": "Looking for someone nearby? Ask ServiBot for providers around your position."
+      },
+      {
+        "title": "Describe a problem",
+        "text": "Not sure who to call? Describe the problem and ServiBot helps you figure it out."
+      }
     ],
     "chat": {
       "name": "ServiBot",
@@ -153,9 +218,18 @@
       "placeholder": "Type your message...",
       "send": "Send",
       "suggestions": [
-        { "title": "Provider", "text": "Need a provider to help you?" },
-        { "title": "Position", "text": "A provider near you?" },
-        { "title": "Describe a problem", "text": "I have a problem and I don't know who to turn to." }
+        {
+          "title": "Provider",
+          "text": "Need a provider to help you?"
+        },
+        {
+          "title": "Position",
+          "text": "A provider near you?"
+        },
+        {
+          "title": "Describe a problem",
+          "text": "I have a problem and I don't know who to turn to."
+        }
       ]
     }
   },
@@ -166,16 +240,126 @@
     "explore": "See providers",
     "more": "And more inside the app",
     "items": {
-      "plumbing": { "name": "Plumbing", "desc": "Leaks, installations and repairs handled by plumbers near you." },
-      "electrical": { "name": "Electrical services", "desc": "Wiring, outlets, lighting and fault repairs, done safely." },
-      "painting": { "name": "Painting", "desc": "Walls, ceilings and finishes to give your space a new look." },
-      "cleaning": { "name": "Cleaning", "desc": "Home cleaning at your rhythm, from a quick refresh to a deep clean." },
-      "carpentry": { "name": "Carpentry", "desc": "Doors, furniture and woodwork, built and repaired with care." },
-      "gardening": { "name": "Gardening", "desc": "Lawns, plants and outdoor spaces kept healthy all year." },
-      "maintenance": { "name": "Home maintenance & repairs", "desc": "Glazing and small repairs to keep everything working." },
-      "tutoring": { "name": "Private tutoring", "desc": "Lessons at home with teachers who adapt to you." },
-      "hairdressing": { "name": "Home hairdresser", "desc": "A professional cut and styling without leaving home." },
-      "coaching": { "name": "Sports coach", "desc": "Personal training sessions where and when it suits you." }
+      "plumbing": {
+        "name": "Plumbing",
+        "desc": "Leaks, installations and repairs handled by plumbers near you.",
+        "long": "A dripping tap, a blocked drain or a leak under the sink: plumbing problems never wait. Describe the issue, set your price and receive proposals from plumbers near you.",
+        "tasks": [
+          "Leaks and dripping taps",
+          "Blocked sinks, toilets and drains",
+          "Installing taps, sinks and water heaters",
+          "Bathroom and kitchen plumbing repairs"
+        ],
+        "ask": "Water is leaking under my kitchen sink."
+      },
+      "electrical": {
+        "name": "Electrical services",
+        "desc": "Wiring, outlets, lighting and fault repairs, done safely.",
+        "long": "A dead outlet, a light that flickers or a breaker that keeps tripping: call an electrician who knows the job and works safely.",
+        "tasks": [
+          "Outlets, switches and lighting",
+          "Breaker and fuse problems",
+          "Fault finding and repairs",
+          "Fitting lights and small appliances"
+        ],
+        "ask": "My living room lights keep flickering."
+      },
+      "painting": {
+        "name": "Painting",
+        "desc": "Walls, ceilings and finishes to give your space a new look.",
+        "long": "Freshen up a room, cover old stains or change the whole mood of your home with a painter who takes care of the details.",
+        "tasks": [
+          "Interior walls and ceilings",
+          "Doors, frames and woodwork",
+          "Preparation, filling and sanding",
+          "Small touch-ups after repairs"
+        ],
+        "ask": "I want to repaint my bedroom this week."
+      },
+      "cleaning": {
+        "name": "Cleaning",
+        "desc": "Home cleaning at your rhythm, from a quick refresh to a deep clean.",
+        "long": "Regular cleaning, a big clean before guests arrive or after moving out: book help at your own rhythm.",
+        "tasks": [
+          "Regular home cleaning",
+          "Deep cleaning",
+          "Cleaning after moving or works",
+          "Kitchen and bathroom cleaning"
+        ],
+        "ask": "I need my apartment cleaned before Saturday."
+      },
+      "carpentry": {
+        "name": "Carpentry",
+        "desc": "Doors, furniture and woodwork, built and repaired with care.",
+        "long": "A door that sticks, a cupboard to fix or furniture to build: carpenters handle wood with care and precision.",
+        "tasks": [
+          "Door and window adjustments",
+          "Furniture repair and assembly",
+          "Shelves and storage",
+          "Custom woodwork"
+        ],
+        "ask": "My wardrobe door came off its hinge."
+      },
+      "gardening": {
+        "name": "Gardening",
+        "desc": "Lawns, plants and outdoor spaces kept healthy all year.",
+        "long": "Lawn, hedges, plants or a garden that got out of hand: a gardener keeps your outdoor space healthy and beautiful.",
+        "tasks": [
+          "Mowing and hedge trimming",
+          "Planting and seasonal care",
+          "Garden clean-up",
+          "Watering and maintenance"
+        ],
+        "ask": "My garden needs a full clean-up."
+      },
+      "maintenance": {
+        "name": "Home maintenance & repairs",
+        "desc": "Glazing and small repairs to keep everything working.",
+        "long": "Broken glass, a loose handle, small jobs piling up: find someone to take care of the little repairs that keep a home working.",
+        "tasks": [
+          "Glazing and window repairs",
+          "Small repairs around the house",
+          "Fixing and mounting",
+          "General maintenance"
+        ],
+        "ask": "A window pane in my living room is cracked."
+      },
+      "tutoring": {
+        "name": "Private tutoring",
+        "desc": "Lessons at home with teachers who adapt to you.",
+        "long": "Help with homework, exam preparation or a new subject: lessons at home with a teacher who adapts to the learner.",
+        "tasks": [
+          "Homework help",
+          "Exam preparation",
+          "Languages",
+          "Maths and sciences"
+        ],
+        "ask": "I'm looking for a maths tutor for my son."
+      },
+      "hairdressing": {
+        "name": "Home hairdresser",
+        "desc": "A professional cut and styling without leaving home.",
+        "long": "A cut, a blow-dry or styling for an event, without leaving home and at a time that suits you.",
+        "tasks": [
+          "Haircuts",
+          "Blow-dry and styling",
+          "Event hairstyles",
+          "Home visits at your time"
+        ],
+        "ask": "I'd like a haircut at home on Sunday."
+      },
+      "coaching": {
+        "name": "Sports coach",
+        "desc": "Personal training sessions where and when it suits you.",
+        "long": "Get back in shape, prepare a goal or simply move more with a coach who builds sessions around you.",
+        "tasks": [
+          "Personal training sessions",
+          "Fitness and strength",
+          "Weight-loss programmes",
+          "Sessions at home or outdoors"
+        ],
+        "ask": "I want a coach to train with me twice a week."
+      }
     }
   },
   "how": {
@@ -184,25 +368,62 @@
     "description": "From the first search to the finished job, ServeYourSpace keeps it simple.",
     "step": "Step",
     "steps": [
-      { "label": "Discover", "title": "Find the service you need.", "text": "Search, browse categories or ask ServiBot." },
-      { "label": "Connect", "title": "Connect with the right service provider.", "text": "Pick a professional close to you and send your request." },
-      { "label": "Negotiate", "title": "Discuss your requirements and negotiate the service details.", "text": "Chat, receive proposals and agree on a fair price." },
-      { "label": "Enjoy", "title": "Get your service completed.", "text": "Follow the mission until it is marked as done." }
+      {
+        "label": "Discover",
+        "title": "Find the service you need.",
+        "text": "Search, browse the categories or simply ask ServiBot."
+      },
+      {
+        "label": "Connect",
+        "title": "Connect with the right service provider.",
+        "text": "Pick a professional close to you and send your request."
+      },
+      {
+        "label": "Negotiate",
+        "title": "Discuss your requirements and negotiate the service details.",
+        "text": "Chat, compare proposals and agree on a price that feels fair."
+      },
+      {
+        "label": "Enjoy",
+        "title": "Get your service completed.",
+        "text": "Job done? It's marked as finished and you get on with your day."
+      }
     ]
   },
   "vision": {
     "eyebrow": "Our vision",
     "title": "Building a Smarter Way to Experience Everyday Services.",
-    "intro": "ServeYourSpace is a young technology startup with a simple belief: getting help at home should be as easy as sending a message.",
-    "mission": { "label": "Our mission", "text": "Simplify access to everyday services through an accessible, connected, and intelligent digital platform." },
-    "vision": { "label": "Our vision", "text": "Build a smarter ecosystem that connects customers and service providers through technology and innovation." },
+    "intro": "Finding a reliable pro shouldn't take five phone calls and a favour from a neighbour. We believe getting help at home should be as easy as sending a message.",
+    "mission": {
+      "label": "Our mission",
+      "text": "Simplify access to everyday services through an accessible, connected, and intelligent digital platform."
+    },
+    "vision": {
+      "label": "Our vision",
+      "text": "Build a smarter ecosystem that connects customers and service providers through technology and innovation."
+    },
     "valuesTitle": "Our values",
     "values": [
-      { "name": "Innovation", "text": "We use technology, including AI, where it truly makes life easier." },
-      { "name": "Simplicity", "text": "Every screen is designed to be understood at first glance." },
-      { "name": "Trust", "text": "Verified accounts and clear exchanges between customers and providers." },
-      { "name": "Accessibility", "text": "Three languages, light and dark mode, for everyone." },
-      { "name": "Digital transformation", "text": "Bringing everyday services into the digital age." }
+      {
+        "name": "Innovation",
+        "text": "We use technology, including AI, where it truly makes life easier."
+      },
+      {
+        "name": "Simplicity",
+        "text": "Every screen is designed to be understood at first glance."
+      },
+      {
+        "name": "Trust",
+        "text": "Verified accounts and clear exchanges between customers and providers."
+      },
+      {
+        "name": "Accessibility",
+        "text": "Three languages, light and dark mode, for everyone."
+      },
+      {
+        "name": "Digital transformation",
+        "text": "Bringing everyday services into the digital age."
+      }
     ]
   },
   "cta": {
@@ -222,13 +443,25 @@
     "app": "The app",
     "email": "Email",
     "rights": "All rights reserved.",
-    "backToTop": "Back to top"
+    "backToTop": "Back to top",
+    "services": "Our services",
+    "becomePro": "Become a provider",
+    "pro": "PRO!",
+    "follow": "Follow us",
+    "downloadTitle": "Download the ServeYourSpace app for a better experience!"
   },
   "mock": {
     "categories": {
       "title": "Our services",
       "search": "Search for a service...",
-      "items": ["Plumber", "Electrician", "Carpenter", "Painter", "Cleaning", "Gardener"]
+      "items": [
+        "Plumber",
+        "Electrician",
+        "Carpenter",
+        "Painter",
+        "Cleaning",
+        "Gardener"
+      ]
     },
     "negotiation": {
       "title": "My request",
@@ -253,5 +486,40 @@
   "a11y": {
     "phoneOf": "Screen: {{name}}",
     "decorative": ""
+  },
+  "notes": {
+    "hero": "the real app, not a mockup!",
+    "showcase": "go on, drag me",
+    "servibot": "he doesn't bite, promise",
+    "services": "can't find yours? ask ServiBot",
+    "download": "soon in your pocket"
+  },
+  "download": {
+    "eyebrow": "The app",
+    "title": "Download the ServeYourSpace app for a better experience!",
+    "description": "Find a professional, follow your requests and chat with ServiBot, wherever you are.",
+    "soon": "Soon",
+    "appStoreTop": "Download on the",
+    "playTop": "GET IT ON",
+    "phonesLabel": "Three screens of the ServeYourSpace app"
+  },
+  "detail": {
+    "back": "All services",
+    "overview": "About this service",
+    "includes": "What providers can help with",
+    "providers": "Providers",
+    "providersCount_one": "{{count}} provider registered",
+    "providersCount_other": "{{count}} providers registered",
+    "providersLive": "Live figure from the ServeYourSpace platform",
+    "providersSoon": "Providers available in the app",
+    "providersHint": "Open the app to see who is available around you right now.",
+    "how": "How it works for this service",
+    "askBot": "Or just ask ServiBot",
+    "related": "Other services",
+    "ctaTitle": "Need it today?",
+    "ctaText": "Download the app, describe what you need and get proposals from providers nearby.",
+    "notFound": "This service doesn't exist (yet).",
+    "home": "Back to home",
+    "photo": "Photo: {{name}}"
   }
 }

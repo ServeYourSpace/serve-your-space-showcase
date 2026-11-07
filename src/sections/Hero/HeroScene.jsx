@@ -204,8 +204,10 @@ function Rig({ pointer, compact, reduced, isDark }) {
     const k = 1 - Math.pow(0.002, dt);
 
     if (group.current) {
-      const targetY = -0.32 + px * 0.42 + (1 - e) * -1.4;
-      const targetX = 0.06 - py * 0.22;
+      // scrolling away spins the phones and tips them back a little
+      const sc = reduced ? 0 : Math.min(1.2, window.scrollY / window.innerHeight);
+      const targetY = -0.32 + px * 0.42 + (1 - e) * -1.4 + sc * 1.1;
+      const targetX = 0.06 - py * 0.22 + sc * 0.35;
       group.current.rotation.y += (targetY - group.current.rotation.y) * k;
       group.current.rotation.x += (targetX - group.current.rotation.x) * k;
       const s = (compact ? 0.92 : 1) * (0.7 + 0.3 * e);
