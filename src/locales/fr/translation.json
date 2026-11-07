@@ -1,0 +1,257 @@
+{
+  "meta": {
+    "title": "ServeYourSpace — Votre espace. Vos services. À votre façon.",
+    "description": "ServeYourSpace (SYS) est une marketplace mobile de services qui met en relation clients et prestataires, avec ServiBot, son assistant IA."
+  },
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "features": "Fonctionnalités",
+    "services": "Nos services",
+    "servibot": "ServiBot",
+    "vision": "Notre vision",
+    "contact": "Contact",
+    "cta": "Découvrir l'app",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "language": "Langue",
+    "theme": "Thème",
+    "toLight": "Passer en mode clair",
+    "toDark": "Passer en mode sombre",
+    "light": "Clair",
+    "dark": "Sombre",
+    "skip": "Aller au contenu",
+    "primary": "Navigation principale"
+  },
+  "hero": {
+    "badge": "L'application mobile ServeYourSpace",
+    "title1": "Votre espace.",
+    "title2": "Vos services.",
+    "title3": "À votre façon.",
+    "description": "Découvrez une façon plus intelligente de trouver des professionnels et de gérer vos services du quotidien. Tout ce dont votre espace a besoin, au même endroit.",
+    "ctaPrimary": "Découvrir ServeYourSpace",
+    "ctaSecondary": "Explorer les fonctionnalités",
+    "scroll": "Faites défiler",
+    "trust": ["Clients & prestataires", "English · Français · العربية", "Mode clair & sombre"],
+    "sceneLabel": "Vue 3D de l'application ServeYourSpace sur un smartphone",
+    "cards": {
+      "categoryLabel": "Catégorie",
+      "categoryName": "Plomberie",
+      "categoryMeta": "Prestataires près de vous",
+      "providerLabel": "Prestataire",
+      "providerName": "Électricien",
+      "providerMeta": "Disponible · Casablanca",
+      "offerLabel": "Nouvelle proposition",
+      "offerPrice": "150 MAD",
+      "offerMeta": "+25 MAD suggérés",
+      "botName": "ServiBot",
+      "botMsg": "Besoin d'un prestataire ? Je vous aide."
+    }
+  },
+  "story": {
+    "eyebrow": "L'expérience",
+    "title": "Une seule app. Chaque étape du service.",
+    "progress": "Chapitre",
+    "chapters": [
+      {
+        "kicker": "01 · L'application",
+        "title": "Votre espace, dans votre poche.",
+        "text": "Créez votre profil en quelques étapes, choisissez votre espace client ou prestataire, et c'est parti."
+      },
+      {
+        "kicker": "02 · Découverte",
+        "title": "Le bon service en quelques secondes.",
+        "text": "Recherchez un service, parcourez les catégories ou ouvrez la carte des services pour voir ce qui est disponible autour de vous."
+      },
+      {
+        "kicker": "03 · Prestataires",
+        "title": "Pensée aussi pour les professionnels.",
+        "text": "Les prestataires suivent leur objectif du jour, leur activité de la semaine, leurs missions terminées et leur historique depuis un tableau de bord dédié."
+      },
+      {
+        "kicker": "04 · Demande & négociation",
+        "title": "Demandez. Proposez. Tombez d'accord.",
+        "text": "Envoyez votre demande, recevez des propositions et ajustez le prix ensemble jusqu'à ce que l'accord convienne à tous."
+      },
+      {
+        "kicker": "05 · ServiBot",
+        "title": "Et un assistant qui vous écoute.",
+        "text": "Décrivez votre besoin avec vos mots. ServiBot vous oriente vers le bon type de professionnel, près de chez vous."
+      }
+    ]
+  },
+  "about": {
+    "eyebrow": "À propos de ServeYourSpace",
+    "title": "Bien plus qu'une plateforme de services.",
+    "description": "ServeYourSpace est un écosystème numérique innovant, conçu pour simplifier la façon dont chacun découvre, contacte et gère ses services du quotidien.",
+    "customers": {
+      "label": "Pour les clients",
+      "title": "Tout ce qu'il vous faut, sans les tracas.",
+      "items": [
+        "Découvrir les services disponibles",
+        "Explorer les catégories de services",
+        "Envoyer des demandes de service",
+        "Entrer en contact avec des professionnels",
+        "Négocier les prix",
+        "Gérer ses demandes et ses activités"
+      ]
+    },
+    "providers": {
+      "label": "Pour les prestataires",
+      "title": "Une boîte à outils pro dans la main.",
+      "items": [
+        "Recevoir les demandes des clients",
+        "Gérer ses offres de service",
+        "Échanger avec les clients",
+        "Proposer et négocier les prix",
+        "Organiser son activité",
+        "Gérer ses services professionnels"
+      ]
+    }
+  },
+  "showcase": {
+    "eyebrow": "L'application mobile",
+    "title": "Pensée pour être évidente.",
+    "description": "Une visite de l'application ServeYourSpace. Les écrans marqués « Écran de l'app » sont capturés dans la vraie application ; ceux marqués « Illustration » représentent une fonctionnalité existante redessinée pour cette page.",
+    "real": "Écran de l'app",
+    "illustration": "Illustration",
+    "prev": "Écran précédent",
+    "next": "Écran suivant",
+    "screens": {
+      "home": { "title": "Accueil", "desc": "Un accueil personnalisé, la recherche de services et un accès rapide à la carte et aux catégories." },
+      "categories": { "title": "Catégories de services", "desc": "Plomberie, électricité, ménage, jardinage et plus, chacune avec sa propre page." },
+      "negotiation": { "title": "Demande & négociation du prix", "desc": "Les propositions arrivent, et le prix peut être augmenté en un geste grâce aux montants suggérés." },
+      "chat": { "title": "Messagerie", "desc": "Clients et prestataires échangent en temps réel autour de chaque mission." },
+      "dashboard": { "title": "Tableau de bord prestataire", "desc": "Objectif du jour, activité de la semaine, missions terminées et en cours, historique et solde." },
+      "servibot": { "title": "Assistant IA ServiBot", "desc": "Un assistant conversationnel avec des suggestions rapides pour trouver le bon prestataire." },
+      "profile": { "title": "Profil", "desc": "Informations personnelles, coordonnées et réglages du compte au même endroit." },
+      "signup": { "title": "Inscription", "desc": "Une création de profil guidée en trois petites étapes." },
+      "otp": { "title": "Vérification de l'e-mail", "desc": "Un code à 6 chiffres envoyé par e-mail sécurise chaque nouveau compte." },
+      "settings": { "title": "Trois langues", "desc": "L'app parle français, anglais et arabe, avec une prise en charge complète de la droite vers la gauche." },
+      "menu": { "title": "Navigation", "desc": "Demandes, messages, notifications, paiements et transactions, à portée de doigt." }
+    }
+  },
+  "servibot": {
+    "eyebrow": "Assistant IA",
+    "title1": "Voici ServiBot.",
+    "title2": "Votre compagnon de services intelligent.",
+    "description": "ServiBot vit dans l'application ServeYourSpace. Au lieu de chercher dans les menus, vous lui dites simplement ce dont vous avez besoin, et il vous aide à avancer.",
+    "capabilities": [
+      { "title": "Parlez naturellement", "text": "Écrivez votre demande comme vous la diriez. Pas de mots-clés, pas de formulaire." },
+      { "title": "Trouver un prestataire", "text": "Demandez un professionnel et ServiBot vous oriente vers le bon type de prestataire." },
+      { "title": "Près de chez vous", "text": "Besoin de quelqu'un à proximité ? Demandez à ServiBot les prestataires autour de votre position." },
+      { "title": "Décrire un problème", "text": "Vous ne savez pas qui appeler ? Décrivez le problème et ServiBot vous aide à y voir clair." }
+    ],
+    "chat": {
+      "name": "ServiBot",
+      "status": "En ligne",
+      "example": "Exemple de conversation",
+      "user1": "J'ai une fuite sous l'évier de la cuisine. Qui dois-je appeler ?",
+      "bot1": "C'est un travail pour un plombier. Voulez-vous voir les plombiers disponibles près de chez vous ?",
+      "user2": "Oui, près de ma position s'il vous plaît.",
+      "bot2": "Parfait. Ouvrez la carte des services pour voir les plombiers autour de vous et envoyer votre demande.",
+      "placeholder": "Tapez votre message...",
+      "send": "Envoyer",
+      "suggestions": [
+        { "title": "Prestataire", "text": "Besoin d'un prestataire pour vous aider ?" },
+        { "title": "Position", "text": "Un prestataire près de chez vous ?" },
+        { "title": "Décrire un problème", "text": "J'ai un problème et je ne sais pas vers qui me tourner." }
+      ]
+    }
+  },
+  "services": {
+    "eyebrow": "Nos services",
+    "title": "Tous les services dont votre espace a besoin.",
+    "description": "Des réparations urgentes à l'entretien du quotidien, ServeYourSpace amène les bons professionnels jusqu'à votre porte.",
+    "explore": "Voir les prestataires",
+    "more": "Et bien plus dans l'application",
+    "items": {
+      "plumbing": { "name": "Plomberie", "desc": "Fuites, installations et réparations par des plombiers près de chez vous." },
+      "electrical": { "name": "Électricité", "desc": "Câblage, prises, éclairage et pannes, réalisés en toute sécurité." },
+      "painting": { "name": "Peinture", "desc": "Murs, plafonds et finitions pour donner un nouveau visage à votre espace." },
+      "cleaning": { "name": "Ménage", "desc": "Le ménage à votre rythme, du simple rafraîchissement au grand nettoyage." },
+      "carpentry": { "name": "Menuiserie", "desc": "Portes, meubles et boiseries, fabriqués et réparés avec soin." },
+      "gardening": { "name": "Jardinage", "desc": "Pelouses, plantes et extérieurs entretenus toute l'année." },
+      "maintenance": { "name": "Entretien & réparations", "desc": "Vitrerie et petites réparations pour que tout fonctionne." },
+      "tutoring": { "name": "Cours particuliers", "desc": "Des cours à domicile avec des enseignants qui s'adaptent à vous." },
+      "hairdressing": { "name": "Coiffeur à domicile", "desc": "Une coupe et un coiffage professionnels sans sortir de chez vous." },
+      "coaching": { "name": "Coach sportif", "desc": "Des séances personnalisées, où et quand vous voulez." }
+    }
+  },
+  "how": {
+    "eyebrow": "Comment ça marche",
+    "title": "Quatre étapes. Zéro friction.",
+    "description": "De la première recherche au travail terminé, ServeYourSpace reste simple.",
+    "step": "Étape",
+    "steps": [
+      { "label": "Découvrir", "title": "Trouvez le service dont vous avez besoin.", "text": "Recherchez, parcourez les catégories ou demandez à ServiBot." },
+      { "label": "Contacter", "title": "Entrez en contact avec le bon prestataire.", "text": "Choisissez un professionnel près de chez vous et envoyez votre demande." },
+      { "label": "Négocier", "title": "Échangez sur vos besoins et négociez les détails du service.", "text": "Discutez, recevez des propositions et convenez d'un prix juste." },
+      { "label": "Profiter", "title": "Votre service est réalisé.", "text": "Suivez la mission jusqu'à ce qu'elle soit marquée comme terminée." }
+    ]
+  },
+  "vision": {
+    "eyebrow": "Notre vision",
+    "title": "Inventer une façon plus intelligente de vivre les services du quotidien.",
+    "intro": "ServeYourSpace est une jeune startup technologique portée par une conviction simple : se faire aider chez soi devrait être aussi facile qu'envoyer un message.",
+    "mission": { "label": "Notre mission", "text": "Simplifier l'accès aux services du quotidien grâce à une plateforme numérique accessible, connectée et intelligente." },
+    "vision": { "label": "Notre vision", "text": "Construire un écosystème plus intelligent qui relie clients et prestataires grâce à la technologie et à l'innovation." },
+    "valuesTitle": "Nos valeurs",
+    "values": [
+      { "name": "Innovation", "text": "Nous utilisons la technologie, IA comprise, là où elle simplifie vraiment la vie." },
+      { "name": "Simplicité", "text": "Chaque écran est pensé pour être compris au premier coup d'œil." },
+      { "name": "Confiance", "text": "Des comptes vérifiés et des échanges clairs entre clients et prestataires." },
+      { "name": "Accessibilité", "text": "Trois langues, un mode clair et un mode sombre, pour tout le monde." },
+      { "name": "Transformation numérique", "text": "Faire entrer les services du quotidien dans l'ère numérique." }
+    ]
+  },
+  "cta": {
+    "eyebrow": "ServeYourSpace",
+    "title": "Votre espace mérite mieux.",
+    "description": "Découvrez une façon plus intelligente, plus simple et plus connectée de gérer vos services du quotidien.",
+    "primary": "Découvrir ServeYourSpace",
+    "secondary": "Nous contacter"
+  },
+  "footer": {
+    "description": "ServeYourSpace met en relation clients et prestataires grâce à une application mobile simple et multilingue, et à un assistant IA, ServiBot.",
+    "explore": "Explorer",
+    "company": "Entreprise",
+    "contact": "Contact",
+    "aboutUs": "À propos de nous",
+    "features": "Fonctionnalités",
+    "app": "L'application",
+    "email": "E-mail",
+    "rights": "Tous droits réservés.",
+    "backToTop": "Retour en haut"
+  },
+  "mock": {
+    "categories": {
+      "title": "Nos services",
+      "search": "Rechercher un service...",
+      "items": ["Plombier", "Électricien", "Menuisier", "Peintre", "Ménage", "Jardinier"]
+    },
+    "negotiation": {
+      "title": "Ma demande",
+      "service": "Plomberie · Réparation de fuite",
+      "status": "En attente d'un prestataire",
+      "current": "Prix actuel",
+      "raise": "Augmenter votre prix",
+      "hint": "Un prix plus élevé est accepté plus vite.",
+      "popular": "Populaire",
+      "confirm": "Confirmer le nouveau prix",
+      "currency": "MAD"
+    },
+    "chat": {
+      "title": "Électricien",
+      "status": "Mission en cours",
+      "m1": "Bonjour ! Je suis en route, j'arrive dans 15 minutes.",
+      "m2": "Parfait, merci. Le tableau est dans l'entrée.",
+      "m3": "C'est noté. À tout de suite !",
+      "input": "Message..."
+    }
+  },
+  "a11y": {
+    "phoneOf": "Écran : {{name}}",
+    "decorative": ""
+  }
+}

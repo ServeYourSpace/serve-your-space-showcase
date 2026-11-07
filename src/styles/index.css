@@ -1,0 +1,194 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ------------------------------------------------------------------
+   Design tokens. One set of components, two themes: every colour used
+   by the UI comes from these variables (RGB triplets for Tailwind alpha).
+------------------------------------------------------------------- */
+@layer base {
+  :root {
+    --bg: 255 255 255;
+    --bg-soft: 247 245 252;
+    --surface: 255 255 255;
+    --ink: 23 14 40;
+    --muted: 94 84 115;
+    --line: 138 71 250;
+    --shadow: 74 32 150;
+    --glass: 255 255 255;
+    --glass-alpha: 0.62;
+    --glass-border: 0.14;
+    --glow-strength: 0.28;
+    --nav-h: 72px;
+    color-scheme: light;
+  }
+
+  .dark {
+    --bg: 11 7 18;
+    --bg-soft: 23 16 32;
+    --surface: 23 16 32;
+    --ink: 255 255 255;
+    --muted: 187 176 207;
+    --line: 167 120 255;
+    --shadow: 0 0 0;
+    --glass: 30 20 46;
+    --glass-alpha: 0.5;
+    --glass-border: 0.18;
+    --glow-strength: 0.55;
+    color-scheme: dark;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: calc(var(--nav-h) + 8px);
+    -webkit-tap-highlight-color: transparent;
+    text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-bg font-sans text-ink antialiased;
+    overflow-x: clip;
+  }
+
+  html[lang='ar'] body,
+  html[lang='ar'] .font-display {
+    font-family: 'IBM Plex Sans Arabic', 'Inter', system-ui, sans-serif;
+  }
+
+  /* Arabic glyphs need a little more air than Sora's tight tracking. */
+  html[lang='ar'] .tracking-tight,
+  html[lang='ar'] .tracking-tighter {
+    letter-spacing: 0;
+  }
+  html[lang='ar'] .leading-\[0\.95\],
+  html[lang='ar'] .leading-\[1\.02\] {
+    line-height: 1.25;
+  }
+
+  ::selection {
+    background: rgb(138 71 250 / 0.35);
+  }
+
+  :focus-visible {
+    outline: 2px solid #8a47fa;
+    outline-offset: 3px;
+    border-radius: 10px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+}
+
+/* Smooth theme switch: enabled only for the moment of the switch. */
+.theme-transition,
+.theme-transition *,
+.theme-transition *::before,
+.theme-transition *::after {
+  transition:
+    background-color 0.45s ease,
+    border-color 0.45s ease,
+    color 0.45s ease,
+    fill 0.45s ease,
+    box-shadow 0.45s ease !important;
+}
+
+@layer components {
+  .glass {
+    background: rgb(var(--glass) / var(--glass-alpha));
+    border: 1px solid rgb(var(--line) / var(--glass-border));
+    backdrop-filter: blur(18px) saturate(140%);
+    -webkit-backdrop-filter: blur(18px) saturate(140%);
+  }
+
+  .glass-strong {
+    background: rgb(var(--glass) / calc(var(--glass-alpha) + 0.25));
+    border: 1px solid rgb(var(--line) / var(--glass-border));
+    backdrop-filter: blur(24px) saturate(150%);
+    -webkit-backdrop-filter: blur(24px) saturate(150%);
+  }
+
+  .text-gradient {
+    background: linear-gradient(100deg, #b98fff 0%, #8a47fa 45%, #5b22bd 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .dark .text-gradient {
+    background: linear-gradient(100deg, #e9dcff 0%, #b98fff 40%, #8a47fa 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-brand-600 dark:text-brand-200;
+    background: rgb(138 71 250 / 0.1);
+    border: 1px solid rgb(138 71 250 / 0.22);
+  }
+  html[lang='ar'] .eyebrow {
+    letter-spacing: 0;
+  }
+
+  .section {
+    @apply relative py-24 sm:py-28 lg:py-36;
+  }
+
+  .h-section {
+    @apply font-display text-[2.1rem] font-bold leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl;
+  }
+
+  .lead {
+    @apply text-base leading-relaxed text-muted sm:text-lg;
+  }
+
+  .grid-bg {
+    background-image:
+      linear-gradient(rgb(var(--line) / 0.07) 1px, transparent 1px),
+      linear-gradient(90deg, rgb(var(--line) / 0.07) 1px, transparent 1px);
+    background-size: 56px 56px;
+    mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+    -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+  }
+
+  .noise::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.05;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+}
+
+@layer utilities {
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+  .perspective {
+    perspective: 1600px;
+  }
+  .flip-rtl {
+    transform: scaleX(1);
+  }
+  [dir='rtl'] .flip-rtl {
+    transform: scaleX(-1);
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+}
