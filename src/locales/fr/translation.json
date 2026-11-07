@@ -521,5 +521,8 @@
     "notFound": "Ce service n'existe pas (encore).",
     "home": "Retour à l'accueil",
     "photo": "Photo : {{name}}"
+  },
+  "intro": {
+    "skip": "Passer"
   }
 }

@@ -2,7 +2,7 @@ import { ArrowUp, Mail } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import LanguageSelector from '../../components/LanguageSelector';
-import Logo from '../../components/Logo';
+import Wordmark from '../../components/Wordmark';
 import SocialLinks from '../../components/SocialLinks';
 import { activeSocials } from '../../data/links';
 import StoreBadges from '../../components/StoreBadges';
@@ -24,7 +24,7 @@ export default function Footer() {
       <div className="container">
         <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-[1.3fr_1.4fr_1fr_1.1fr]">
           <div>
-            <Logo />
+            <Wordmark className="h-[4.5rem]" />
             <p className="mt-5 max-w-sm leading-relaxed text-muted">{t('footer.description')}</p>
             <a href={`mailto:${CONTACT_EMAIL}`} className="mt-5 inline-flex items-center gap-2 font-semibold transition hover:text-brand-500">
               <Mail className="h-4 w-4 text-brand-500" aria-hidden />

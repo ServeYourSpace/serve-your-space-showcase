@@ -1,3 +1,4 @@
+import IntroSplash from '../components/IntroSplash';
 import Navbar from '../components/Navbar';
 import ScrollProgress from '../components/ScrollProgress';
 import Footer from '../sections/Footer';
@@ -5,6 +6,7 @@ import Footer from '../sections/Footer';
 export default function MainLayout({ children }) {
   return (
     <>
+      <IntroSplash />
       <ScrollProgress />
       <Navbar />
       <main id="main" tabIndex={-1} className="outline-none">
