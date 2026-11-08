@@ -170,7 +170,7 @@ export default function ServiceDetailPage() {
         <div className="relative">
           <TiltPhoto service={service} name={name} />
           <HandNote arrow="down-end" rotate={-6} className="absolute -top-12 start-2 hidden sm:flex">
-            {t('notes.hero')}
+            {t('notes.services')}
           </HandNote>
         </div>
       </section>

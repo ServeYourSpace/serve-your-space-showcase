@@ -23,7 +23,7 @@ export default function CategoriesMock({ dark }) {
       <div className="mt-[0.9em] grid flex-1 grid-cols-2 gap-[0.6em] overflow-hidden">
         {IMAGES.map((img, i) => (
           <div key={img} className="relative overflow-hidden rounded-[0.9em]">
-            <img src={`/images/services/${img}.webp`} alt="" loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
+            <img src={`/images/app-categories/${img}.webp`} alt="" loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
             <span className="absolute bottom-[0.55em] start-[0.6em] text-[0.85em] font-bold text-white">{items[i]}</span>
           </div>
