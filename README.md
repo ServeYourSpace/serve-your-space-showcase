@@ -1,6 +1,6 @@
 # ServeYourSpace — Showcase Website
 
-Live: https://servez-votre-espace.vercel.app
+Live: https://serve-your-space.vercel.app
 
 Official ServeYourSpace showcase website — a premium, immersive, fully responsive 3D presentation of the ServeYourSpace mobile application and its ecosystem.
 
