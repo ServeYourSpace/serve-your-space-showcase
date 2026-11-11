@@ -22,7 +22,7 @@ const CHAPTER_SCREENS = [
 const GLOWS = ['#8a47fa', '#6d5dfc', '#c04bf2', '#f0a030', '#8a47fa'];
 
 function PinnedStory({ chapters }) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const root = useRef(null);
   const [active, setActive] = useState(0);
   const activeRef = useRef(0);
@@ -81,7 +81,8 @@ function PinnedStory({ chapters }) {
         tl.to({}, { duration: 0.4 });
       });
     },
-    [n],
+    // rebuild the timeline when the language changes: texts are re-rendered with new sizes
+    [n, i18n.language],
   );
 
   return (
@@ -91,9 +92,9 @@ function PinnedStory({ chapters }) {
           {/* chapter copy */}
           <div className="relative">
             <div className="mb-8 flex items-center gap-2" aria-hidden>
-              {chapters.map((c, i) => (
+              {chapters.map((_, i) => (
                 <span
-                  key={c.kicker}
+                  key={i}
                   className={cn(
                     'h-1.5 rounded-full transition-all duration-500',
                     i === active ? 'w-10 bg-brand-500' : i < active ? 'w-4 bg-brand-500/60' : 'w-4 bg-brand-500/20',
@@ -103,7 +104,7 @@ function PinnedStory({ chapters }) {
             </div>
             <div className="grid">
               {chapters.map((c, i) => (
-                <div key={c.kicker} data-text className="[grid-area:1/1]" aria-hidden={i !== active}>
+                <div key={i} data-text className="[grid-area:1/1]" aria-hidden={i !== active}>
                   <p className="font-display text-sm font-semibold uppercase tracking-[0.2em] text-brand-500" dir="auto">
                     {c.kicker}
                   </p>

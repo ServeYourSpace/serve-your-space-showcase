@@ -9,7 +9,7 @@ import { cn } from '../../utils/cn';
 const ICONS = [Search, Users, Handshake, CircleCheckBig];
 
 export default function HowItWorks() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const steps = t('how.steps');
   const root = useRef(null);
   const [reached, setReached] = useState(-1);
@@ -63,7 +63,7 @@ export default function HowItWorks() {
         });
       },
     );
-  }, [steps.length]);
+  }, [steps.length, i18n.language]);
 
   return (
     <section ref={root} id="how" aria-labelledby="how-title" className="section isolate overflow-hidden bg-bg-soft">
@@ -84,7 +84,7 @@ export default function HowItWorks() {
             const Icon = ICONS[i];
             const on = i <= reached;
             return (
-              <li key={s.label} data-step className="relative lg:text-center">
+              <li key={i} data-step className="relative lg:text-center">
                 <span
                   className={cn(
                     'absolute -start-14 top-0 grid h-11 w-11 place-items-center rounded-full font-display text-sm font-bold transition-all duration-500 lg:-top-[4.2rem] lg:start-1/2 lg:h-14 lg:w-14 lg:-translate-x-1/2 lg:rtl:translate-x-1/2',
