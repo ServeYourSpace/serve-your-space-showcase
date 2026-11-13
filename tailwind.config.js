@@ -45,6 +45,7 @@ export default {
       keyframes: {
         float: { '0%,100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-14px)' } },
         marquee: { from: { transform: 'translateX(0)' }, to: { transform: 'translateX(-50%)' } },
+        'marquee-reverse': { from: { transform: 'translateX(-50%)' }, to: { transform: 'translateX(0)' } },
         'spin-slow': { to: { transform: 'rotate(360deg)' } },
         pulseglow: { '0%,100%': { opacity: '.55' }, '50%': { opacity: '1' } },
         typing: { '0%,80%,100%': { transform: 'translateY(0)', opacity: '.4' }, '40%': { transform: 'translateY(-4px)', opacity: '1' } },
@@ -52,6 +53,7 @@ export default {
       animation: {
         float: 'float 7s ease-in-out infinite',
         marquee: 'marquee 40s linear infinite',
+        'marquee-reverse': 'marquee-reverse 40s linear infinite',
         'spin-slow': 'spin-slow 30s linear infinite',
         pulseglow: 'pulseglow 4s ease-in-out infinite',
         typing: 'typing 1.2s ease-in-out infinite',

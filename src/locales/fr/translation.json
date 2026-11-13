@@ -524,5 +524,22 @@
   },
   "intro": {
     "skip": "Passer"
+  },
+  "reviews": {
+    "eyebrow": "Avis",
+    "title": "Ce qu'ils disent de ServeYourSpace.",
+    "description": "Clients et prestataires racontent leur expérience avec l'application, avec leurs propres mots.",
+    "role": {
+      "client": "Client",
+      "provider": "Prestataire"
+    },
+    "stars_one": "{{count}} étoile sur 5",
+    "stars_other": "{{count}} étoiles sur 5",
+    "count_one": "{{count}} avis",
+    "count_other": "{{count}} avis",
+    "sample": "Exemple",
+    "sampleBanner": "Aperçu de la mise en page : ce sont des exemples, pas de vrais avis",
+    "leave": "Laisser un avis",
+    "mailSubject": "Mon avis sur ServeYourSpace"
   }
 }

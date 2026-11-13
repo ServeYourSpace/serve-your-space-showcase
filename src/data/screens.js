@@ -27,4 +27,23 @@ export const SHOWCASE_SCREENS = [
   { id: 'menu', real: true },
 ];
 
-export const screenSrc = (id, isDark) => SCREEN_IMAGES[id]?.[isDark ? 'dark' : 'light'];
+// Per-language / per-theme captures dropped in src/assets/screens/ (see README there).
+// File names: <id>.<lang>.<theme>.webp, <id>.<lang>.webp or <id>.<theme>.webp
+// e.g. home.ar.dark.webp, dashboard.fr.light.webp, servibot.en.webp
+const VARIANTS = Object.fromEntries(
+  Object.entries(import.meta.glob('../assets/screens/*.{webp,png,jpg,jpeg}', { eager: true, query: '?url', import: 'default' })).map(
+    ([path, url]) => [path.split('/').pop().replace(/\.(webp|png|jpe?g)$/, ''), url],
+  ),
+);
+
+/** Best capture for a screen: same language + theme, then same language, then same theme, then the default set. */
+export function screenSrc(id, isDark, lang) {
+  const theme = isDark ? 'dark' : 'light';
+  const base = (lang || 'en').split('-')[0];
+  return (
+    VARIANTS[`${id}.${base}.${theme}`] ||
+    VARIANTS[`${id}.${base}`] ||
+    VARIANTS[`${id}.${theme}`] ||
+    SCREEN_IMAGES[id]?.[theme]
+  );
+}

@@ -8,6 +8,7 @@ import FinalCTA from '../sections/FinalCTA';
 import Hero from '../sections/Hero';
 import HowItWorks from '../sections/HowItWorks';
 import ServiBot from '../sections/ServiBot';
+import Reviews from '../sections/Reviews';
 import Services from '../sections/Services';
 import Vision from '../sections/Vision';
 import { scrollToId } from '../utils/scroll';
@@ -31,6 +32,7 @@ export default function HomePage() {
       <ServiBot />
       <Services />
       <HowItWorks />
+      <Reviews />
       <Vision />
       <FinalCTA />
       <Download />

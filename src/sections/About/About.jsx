@@ -6,11 +6,11 @@ import AmbientGlow from '../../components/AmbientGlow';
 import PhoneFrame from '../../components/PhoneFrame';
 import ScreenImage from '../../components/ScreenImage';
 import SectionHeading from '../../components/SectionHeading';
-import { useTheme } from '../../context/ThemeContext';
+import { useScreenSrc } from '../../hooks/useScreenSrc';
 import { cn } from '../../utils/cn';
 
 function SideCard({ data, icon: Icon, screen, accent, index }) {
-  const { isDark } = useTheme();
+  const src = useScreenSrc();
   const rx = useSpring(useMotionValue(0), { stiffness: 120, damping: 16 });
   const ry = useSpring(useMotionValue(0), { stiffness: 120, damping: 16 });
   const phoneRotY = useTransform(ry, (v) => v * 1.8 - 14);
@@ -55,7 +55,7 @@ function SideCard({ data, icon: Icon, screen, accent, index }) {
         </div>
         <motion.div style={{ rotateY: phoneRotY }} className="perspective mx-auto w-[150px] sm:w-[170px] md:-mb-24 md:w-[180px]">
           <PhoneFrame className="w-full transition-transform duration-700 group-hover:-translate-y-3">
-            <ScreenImage src={screen(isDark)} alt="" />
+            <ScreenImage src={src(screen)} alt="" />
           </PhoneFrame>
         </motion.div>
       </div>
@@ -82,14 +82,14 @@ export default function About() {
             data={t('about.customers')}
             icon={UserRound}
             accent="bg-brand-500"
-            screen={(dark) => (dark ? '/screenshots/home.webp' : '/screenshots/home_fr.webp')}
+            screen="home"
           />
           <SideCard
             index={1}
             data={t('about.providers')}
             icon={Briefcase}
             accent="bg-fuchsia-500"
-            screen={(dark) => (dark ? '/screenshots/dash_dark.webp' : '/screenshots/dash_light.webp')}
+            screen="dashboard"
           />
         </motion.div>
 

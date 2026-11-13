@@ -7,13 +7,13 @@ import PhoneFrame from '../../components/PhoneFrame';
 import ScreenImage from '../../components/ScreenImage';
 import StoreBadges from '../../components/StoreBadges';
 import { useLanguage } from '../../context/LanguageContext';
-import { useTheme } from '../../context/ThemeContext';
+import { useScreenSrc } from '../../hooks/useScreenSrc';
 import { usePrefersReducedMotion } from '../../hooks/useMediaQuery';
 
 /** "Download the app" band: store badges + a fan of three phones that opens in 3D on scroll. */
 export default function Download() {
   const { t } = useTranslation();
-  const { isDark } = useTheme();
+  const src = useScreenSrc();
   const { isRTL } = useLanguage();
   const reduced = usePrefersReducedMotion();
   const ref = useRef(null);
@@ -87,7 +87,7 @@ export default function Download() {
                   className="absolute bottom-6 w-[30%] max-w-[170px] opacity-90"
                 >
                   <PhoneFrame className="w-full">
-                    <ScreenImage src="/screenshots/servibot.webp" alt="" />
+                    <ScreenImage src={src('servibot')} alt="" />
                   </PhoneFrame>
                 </motion.div>
                 <motion.div
@@ -95,12 +95,12 @@ export default function Download() {
                   className="absolute bottom-6 w-[30%] max-w-[170px] opacity-90"
                 >
                   <PhoneFrame className="w-full">
-                    <ScreenImage src={isDark ? '/screenshots/dash_dark.webp' : '/screenshots/dash_light.webp'} alt="" />
+                    <ScreenImage src={src('dashboard')} alt="" />
                   </PhoneFrame>
                 </motion.div>
                 <motion.div style={{ y: centerY }} className="relative z-10 w-[40%] max-w-[230px]">
                   <PhoneFrame className="w-full">
-                    <ScreenImage src={isDark ? '/screenshots/home.webp' : '/screenshots/home_fr.webp'} alt="" />
+                    <ScreenImage src={src('home')} alt="" />
                   </PhoneFrame>
                 </motion.div>
               </motion.div>

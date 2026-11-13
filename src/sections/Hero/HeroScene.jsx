@@ -2,6 +2,7 @@ import { Canvas, useFrame } from '@react-three/fiber';
 import { Environment, Lightformer, RoundedBox, useTexture } from '@react-three/drei';
 import { useEffect, useMemo, useRef } from 'react';
 import * as THREE from 'three';
+import { screenSrc } from '../../data/screens';
 
 /* ------------------------------------------------------------------
    Hero WebGL scene: one large phone showing the real app, two smaller
@@ -179,7 +180,7 @@ function FakeShadow({ y }) {
   );
 }
 
-function Rig({ pointer, compact, reduced, isDark }) {
+function Rig({ pointer, compact, reduced, isDark, lang }) {
   const group = useRef();
   const main = useRef();
   const left = useRef();
@@ -187,11 +188,11 @@ function Rig({ pointer, compact, reduced, isDark }) {
   const t0 = useRef(null);
 
   const [homeLight, homeDark, dashLight, dashDark, bot] = useTexture([
-    '/screenshots/home_fr.webp',
-    '/screenshots/home.webp',
-    '/screenshots/dash_light.webp',
-    '/screenshots/dash_dark.webp',
-    '/screenshots/servibot.webp',
+    screenSrc('home', false, lang),
+    screenSrc('home', true, lang),
+    screenSrc('dashboard', false, lang),
+    screenSrc('dashboard', true, lang),
+    screenSrc('servibot', isDark, lang),
   ]);
 
   useFrame((state, dt) => {
@@ -240,7 +241,7 @@ function Rig({ pointer, compact, reduced, isDark }) {
   );
 }
 
-export default function HeroScene({ isDark, compact = false, reduced = false, active = true }) {
+export default function HeroScene({ isDark, lang, compact = false, reduced = false, active = true }) {
   const pointer = useRef({ x: 0, y: 0 });
 
   useEffect(() => {
@@ -271,7 +272,7 @@ export default function HeroScene({ isDark, compact = false, reduced = false, ac
         <Lightformer form="ring" intensity={2} color="#b98fff" position={[0, 0, -4]} scale={3} />
       </Environment>
       <Particles count={compact ? 160 : 420} reduced={reduced} />
-      <Rig pointer={pointer} compact={compact} reduced={reduced} isDark={isDark} />
+      <Rig pointer={pointer} compact={compact} reduced={reduced} isDark={isDark} lang={lang} />
     </Canvas>
   );
 }

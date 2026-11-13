@@ -528,5 +528,25 @@
   },
   "intro": {
     "skip": "تخطَّ"
+  },
+  "reviews": {
+    "eyebrow": "آراء المستخدمين",
+    "title": "ماذا يقولون عن ServeYourSpace؟",
+    "description": "العملاء ومقدمو الخدمات يشاركون تجربتهم مع التطبيق بكلماتهم الخاصة.",
+    "role": {
+      "client": "عميل",
+      "provider": "مقدم خدمة"
+    },
+    "stars_other": "{{count}} من 5 نجوم",
+    "count_zero": "لا توجد تقييمات",
+    "count_one": "تقييم واحد",
+    "count_two": "تقييمان",
+    "count_few": "{{count}} تقييمات",
+    "count_many": "{{count}} تقييمًا",
+    "count_other": "{{count}} تقييم",
+    "sample": "مثال",
+    "sampleBanner": "معاينة التصميم: هذه أمثلة وليست تقييمات حقيقية",
+    "leave": "اترك تقييمك",
+    "mailSubject": "رأيي في ServeYourSpace"
   }
 }

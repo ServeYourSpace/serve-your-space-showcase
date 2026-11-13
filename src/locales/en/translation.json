@@ -524,5 +524,22 @@
   },
   "intro": {
     "skip": "Skip"
+  },
+  "reviews": {
+    "eyebrow": "Reviews",
+    "title": "What people say about ServeYourSpace.",
+    "description": "Customers and providers share their experience with the app, in their own words.",
+    "role": {
+      "client": "Customer",
+      "provider": "Provider"
+    },
+    "stars_one": "{{count}} star out of 5",
+    "stars_other": "{{count}} stars out of 5",
+    "count_one": "{{count}} review",
+    "count_other": "{{count}} reviews",
+    "sample": "Example",
+    "sampleBanner": "Layout preview: these are examples, not real reviews",
+    "leave": "Leave a review",
+    "mailSubject": "My review of ServeYourSpace"
   }
 }

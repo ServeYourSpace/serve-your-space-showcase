@@ -8,6 +8,7 @@ import Button from '../../components/Button';
 import HandNote from '../../components/HandNote';
 import PhoneFrame from '../../components/PhoneFrame';
 import ScreenImage from '../../components/ScreenImage';
+import { useScreenSrc } from '../../hooks/useScreenSrc';
 import { useTheme } from '../../context/ThemeContext';
 import { useInView } from '../../hooks/useInView';
 import { useMediaQuery, usePrefersReducedMotion } from '../../hooks/useMediaQuery';
@@ -39,11 +40,11 @@ class SceneBoundary extends Component {
 }
 
 function StaticPhone() {
-  const { isDark } = useTheme();
+  const src = useScreenSrc();
   return (
     <div className="absolute inset-0 grid place-items-center">
       <PhoneFrame className="w-[46%] max-w-[260px] animate-float">
-        <ScreenImage eager src={isDark ? '/screenshots/home.webp' : '/screenshots/home_fr.webp'} alt="" />
+        <ScreenImage eager src={src('home')} alt="" />
       </PhoneFrame>
     </div>
   );
@@ -66,7 +67,7 @@ function FloatCard({ children, className, depth = 20, mx, my, delay = 0 }) {
 }
 
 export default function Hero() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const { isDark } = useTheme();
   const reduced = usePrefersReducedMotion();
   const compact = useMediaQuery('(max-width: 767px)');
@@ -185,7 +186,7 @@ export default function Hero() {
             {webgl ? (
               <SceneBoundary fallback={fallback}>
                 <Suspense fallback={fallback}>
-                  <HeroScene isDark={isDark} compact={compact} reduced={reduced} active={inView} />
+                  <HeroScene isDark={isDark} lang={i18n.language} compact={compact} reduced={reduced} active={inView} />
                 </Suspense>
               </SceneBoundary>
             ) : (
