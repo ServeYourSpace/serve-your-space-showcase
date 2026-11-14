@@ -22,6 +22,7 @@ export const SHOWCASE_SCREENS = [
   { id: 'servibot', real: true },
   { id: 'profile', real: true },
   { id: 'signup', real: true },
+  { id: 'login', real: true },
   { id: 'otp', real: true },
   { id: 'settings', real: true },
   { id: 'menu', real: true },
@@ -44,6 +45,9 @@ export function screenSrc(id, isDark, lang) {
     VARIANTS[`${id}.${base}.${theme}`] ||
     VARIANTS[`${id}.${base}`] ||
     VARIANTS[`${id}.${theme}`] ||
-    SCREEN_IMAGES[id]?.[theme]
+    SCREEN_IMAGES[id]?.[theme] ||
+    // last resort: the same screen in another language, same theme first
+    ['en', 'fr', 'ar'].map((l) => VARIANTS[`${id}.${l}.${theme}`]).find(Boolean) ||
+    ['en', 'fr', 'ar'].map((l) => VARIANTS[`${id}.${l}.${isDark ? 'light' : 'dark'}`]).find(Boolean)
   );
 }

@@ -170,6 +170,10 @@
         "title": "Sign-up",
         "desc": "A guided profile creation in three short steps."
       },
+      "login": {
+        "title": "Sign in",
+        "desc": "Sign in with your email and password, or create an account in a few seconds."
+      },
       "otp": {
         "title": "Email verification",
         "desc": "A 6-digit code sent by email secures every new account."

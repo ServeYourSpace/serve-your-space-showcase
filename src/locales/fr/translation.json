@@ -170,6 +170,10 @@
         "title": "Inscription",
         "desc": "Une création de profil guidée en trois petites étapes."
       },
+      "login": {
+        "title": "Connexion",
+        "desc": "Connexion par e-mail et mot de passe, ou création d'un compte en quelques secondes."
+      },
       "otp": {
         "title": "Vérification de l'e-mail",
         "desc": "Un code à 6 chiffres envoyé par e-mail sécurise chaque nouveau compte."
