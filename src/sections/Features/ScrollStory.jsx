@@ -7,6 +7,7 @@ import PhoneFrame from '../../components/PhoneFrame';
 import ScreenContent from '../../components/ScreenContent';
 import SectionHeading from '../../components/SectionHeading';
 import SourceBadge from '../../components/SourceBadge';
+import { useAudience, useAudienceT } from '../../context/AudienceContext';
 import { useGsap } from '../../hooks/useGsap';
 import { useMediaQuery, usePrefersReducedMotion } from '../../hooks/useMediaQuery';
 import { cn } from '../../utils/cn';
@@ -19,9 +20,17 @@ const CHAPTER_SCREENS = [
   { id: 'negotiation', real: false, mock: 'negotiation' },
   { id: 'servibot', real: true },
 ];
+// provider side: sign-up, dashboard, incoming requests, mission chat, balance
+const PRO_CHAPTER_SCREENS = [
+  { id: 'welcome', real: true },
+  { id: 'home', real: true },
+  { id: 'negotiation', real: false, mock: 'negotiation' },
+  { id: 'chat', real: false, mock: 'chat' },
+  { id: 'wallet', real: true },
+];
 const GLOWS = ['#8a47fa', '#6d5dfc', '#c04bf2', '#f0a030', '#8a47fa'];
 
-function PinnedStory({ chapters }) {
+function PinnedStory({ chapters, screens }) {
   const { t, i18n } = useTranslation();
   const root = useRef(null);
   const [active, setActive] = useState(0);
@@ -82,7 +91,7 @@ function PinnedStory({ chapters }) {
       });
     },
     // rebuild the timeline when the language changes: texts are re-rendered with new sizes
-    [n, i18n.language],
+    [n, i18n.language, screens],
   );
 
   return (
@@ -126,15 +135,15 @@ function PinnedStory({ chapters }) {
             <div aria-hidden className="absolute h-[86%] w-[86%] rounded-full border border-brand-500/15" />
             <div aria-hidden className="absolute h-[64%] w-[64%] rounded-full border border-dashed border-brand-500/20 animate-spin-slow" />
             <PhoneFrame data-phone className="preserve-3d relative h-[72svh] max-h-[640px] w-auto will-change-transform">
-              {CHAPTER_SCREENS.map((s, i) => (
-                <div key={s.id} data-screen className="absolute inset-0">
+              {screens.map((s, i) => (
+                <div key={i} data-screen className="absolute inset-0">
                   <ScreenContent screen={s} eager={i === 0} alt={i === active ? t('a11y.phoneOf', { name: chapters[i].title }) : ''} />
                 </div>
               ))}
             </PhoneFrame>
             <div className="absolute bottom-0 grid">
-              {CHAPTER_SCREENS.map((s) => (
-                <div key={s.id} data-badge className="[grid-area:1/1] flex justify-center">
+              {screens.map((s, i) => (
+                <div key={i} data-badge className="[grid-area:1/1] flex justify-center">
                   <SourceBadge real={s.real} />
                 </div>
               ))}
@@ -146,14 +155,14 @@ function PinnedStory({ chapters }) {
   );
 }
 
-function StackedStory({ chapters }) {
+function StackedStory({ chapters, screens }) {
   return (
     <div className="container grid gap-20 pt-6">
       {chapters.map((c, i) => {
-        const s = CHAPTER_SCREENS[i];
+        const s = screens[i];
         return (
           <motion.article
-            key={c.kicker}
+            key={i}
             initial="hidden"
             whileInView="show"
             viewport={viewport}
@@ -181,8 +190,10 @@ function StackedStory({ chapters }) {
 }
 
 export default function ScrollStory() {
-  const { t } = useTranslation();
-  const chapters = t('story.chapters');
+  const at = useAudienceT();
+  const { isProvider } = useAudience();
+  const chapters = at('story.chapters');
+  const screens = isProvider ? PRO_CHAPTER_SCREENS : CHAPTER_SCREENS;
   const desktop = useMediaQuery('(min-width: 1024px)');
   const reduced = usePrefersReducedMotion();
 
@@ -190,9 +201,9 @@ export default function ScrollStory() {
     <section id="features" aria-labelledby="story-title" className="relative isolate pt-24 sm:pt-28 lg:pt-36">
       <div aria-hidden className="absolute inset-0 -z-10 bg-gradient-to-b from-bg via-bg-soft to-bg" />
       <div className="container">
-        <SectionHeading id="story-title" eyebrow={t('story.eyebrow')} title={t('story.title')} />
+        <SectionHeading id="story-title" eyebrow={at('story.eyebrow')} title={at('story.title')} />
       </div>
-      {desktop && !reduced ? <PinnedStory chapters={chapters} /> : <StackedStory chapters={chapters} />}
+      {desktop && !reduced ? <PinnedStory chapters={chapters} screens={screens} /> : <StackedStory chapters={chapters} screens={screens} />}
       <div className="h-16 lg:h-24" />
     </section>
   );

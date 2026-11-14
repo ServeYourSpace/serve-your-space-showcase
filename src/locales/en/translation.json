@@ -545,5 +545,89 @@
     "sampleBanner": "Layout preview: these are examples, not real reviews",
     "leave": "Leave a review",
     "mailSubject": "My review of ServeYourSpace"
+  },
+  "audience": {
+    "label": "I am a",
+    "client": "Customer",
+    "provider": "Provider"
+  },
+  "pro": {
+    "hero": {
+      "badge": "ServeYourSpace for providers",
+      "description": "Get requests from customers near you, offer your price and follow your work in one place: missions, daily goal and balance.",
+      "ctaPrimary": "Become a provider",
+      "cards": {
+        "categoryLabel": "New request",
+        "categoryName": "Leak under the sink",
+        "categoryMeta": "A customer near you",
+        "providerLabel": "Your status",
+        "providerName": "Online",
+        "providerMeta": "Visible to customers · Casablanca",
+        "offerLabel": "Your offer",
+        "offerPrice": "150 MAD",
+        "offerMeta": "The customer can raise it",
+        "botName": "ServiBot",
+        "botMsg": "I can guide you through your dashboard."
+      }
+    },
+    "story": {
+      "title": "One app. Your whole business.",
+      "chapters": [
+        {
+          "kicker": "01 · Sign up",
+          "title": "Your pro profile in minutes.",
+          "text": "Create your provider account and verify your identity: your national ID card is read automatically, no retyping."
+        },
+        {
+          "kicker": "02 · Dashboard",
+          "title": "Your day at a glance.",
+          "text": "Daily goal, weekly activity, completed missions and history: you know where you stand as soon as you open the app."
+        },
+        {
+          "kicker": "03 · Requests",
+          "title": "Requests come to you.",
+          "text": "Customers near you describe what they need and their price. You reply with your offer, and the customer can adjust it."
+        },
+        {
+          "kicker": "04 · Mission",
+          "title": "Stay in touch until the job is done.",
+          "text": "One conversation per mission to talk with the customer, follow the job and close it from the app."
+        },
+        {
+          "kicker": "05 · Balance",
+          "title": "Keep an eye on your earnings.",
+          "text": "Each completed mission counts toward your daily goal, and your balance and payments stay visible in the app."
+        }
+      ]
+    },
+    "how": {
+      "title": "Four steps to more work.",
+      "description": "From sign-up to a finished mission, ServeYourSpace has your back.",
+      "steps": [
+        {
+          "label": "Sign up",
+          "title": "Create your provider profile.",
+          "text": "Your services, your area and a quick identity check."
+        },
+        {
+          "label": "Receive",
+          "title": "Get requests near you.",
+          "text": "Customers describe their need and the price they offer."
+        },
+        {
+          "label": "Offer",
+          "title": "Offer your price and talk.",
+          "text": "Chat with the customer and agree before you head out."
+        },
+        {
+          "label": "Finish",
+          "title": "Do the job.",
+          "text": "Close it in the app: it counts toward your goal and shows in your history."
+        }
+      ]
+    },
+    "cta": {
+      "description": "Join ServeYourSpace as a provider and find new customers near you."
+    }
   }
 }

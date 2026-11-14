@@ -545,5 +545,89 @@
     "sampleBanner": "Aperçu de la mise en page : ce sont des exemples, pas de vrais avis",
     "leave": "Laisser un avis",
     "mailSubject": "Mon avis sur ServeYourSpace"
+  },
+  "audience": {
+    "label": "Je suis",
+    "client": "Client",
+    "provider": "Prestataire"
+  },
+  "pro": {
+    "hero": {
+      "badge": "ServeYourSpace pour les prestataires",
+      "description": "Recevez les demandes des clients près de chez vous, proposez votre prix et suivez votre activité au même endroit : missions, objectif du jour et solde.",
+      "ctaPrimary": "Devenir prestataire",
+      "cards": {
+        "categoryLabel": "Nouvelle demande",
+        "categoryName": "Fuite sous l'évier",
+        "categoryMeta": "Un client près de vous",
+        "providerLabel": "Votre statut",
+        "providerName": "En ligne",
+        "providerMeta": "Visible par les clients · Casablanca",
+        "offerLabel": "Votre proposition",
+        "offerPrice": "150 MAD",
+        "offerMeta": "Le client peut l'augmenter",
+        "botName": "ServiBot",
+        "botMsg": "Je peux vous guider dans votre tableau de bord."
+      }
+    },
+    "story": {
+      "title": "Une seule app. Toute votre activité.",
+      "chapters": [
+        {
+          "kicker": "01 · Inscription",
+          "title": "Votre profil pro en quelques minutes.",
+          "text": "Créez votre compte prestataire et vérifiez votre identité : la carte nationale est lue automatiquement, sans tout retaper."
+        },
+        {
+          "kicker": "02 · Tableau de bord",
+          "title": "Votre journée, d'un coup d'œil.",
+          "text": "Objectif du jour, activité de la semaine, missions terminées et historique : vous savez où vous en êtes dès que vous ouvrez l'app."
+        },
+        {
+          "kicker": "03 · Demandes",
+          "title": "Les demandes viennent à vous.",
+          "text": "Les clients près de chez vous décrivent leur besoin et leur prix. Vous répondez avec votre proposition, et le client peut l'ajuster."
+        },
+        {
+          "kicker": "04 · Mission",
+          "title": "Restez en contact jusqu'au bout.",
+          "text": "Une conversation par mission pour échanger avec le client, suivre l'intervention et la terminer depuis l'app."
+        },
+        {
+          "kicker": "05 · Solde",
+          "title": "Gardez un œil sur vos revenus.",
+          "text": "Chaque mission terminée compte pour votre objectif du jour, et votre solde et vos paiements restent visibles dans l'application."
+        }
+      ]
+    },
+    "how": {
+      "title": "Quatre étapes pour travailler plus.",
+      "description": "De l'inscription à la mission terminée, ServeYourSpace vous accompagne.",
+      "steps": [
+        {
+          "label": "S'inscrire",
+          "title": "Créez votre profil prestataire.",
+          "text": "Vos services, votre zone et une vérification d'identité rapide."
+        },
+        {
+          "label": "Recevoir",
+          "title": "Recevez les demandes près de chez vous.",
+          "text": "Les clients décrivent leur besoin et le prix qu'ils proposent."
+        },
+        {
+          "label": "Proposer",
+          "title": "Proposez votre prix et échangez.",
+          "text": "Discutez avec le client et mettez-vous d'accord avant de vous déplacer."
+        },
+        {
+          "label": "Terminer",
+          "title": "Réalisez la mission.",
+          "text": "Terminez-la dans l'app : elle compte pour votre objectif et apparaît dans votre historique."
+        }
+      ]
+    },
+    "cta": {
+      "description": "Rejoignez ServeYourSpace en tant que prestataire et trouvez de nouveaux clients près de chez vous."
+    }
   }
 }

@@ -37,8 +37,7 @@ const VARIANTS = Object.fromEntries(
   ),
 );
 
-/** Best capture for a screen: same language + theme, then same language, then same theme, then the default set. */
-export function screenSrc(id, isDark, lang) {
+function resolve(id, isDark, lang) {
   const theme = isDark ? 'dark' : 'light';
   const base = (lang || 'en').split('-')[0];
   return (
@@ -50,4 +49,27 @@ export function screenSrc(id, isDark, lang) {
     ['en', 'fr', 'ar'].map((l) => VARIANTS[`${id}.${l}.${theme}`]).find(Boolean) ||
     ['en', 'fr', 'ar'].map((l) => VARIANTS[`${id}.${l}.${isDark ? 'light' : 'dark'}`]).find(Boolean)
   );
+}
+
+// Provider-side captures are named `pro-<screen>....` (e.g. pro-home.fr.dark.webp = provider dashboard).
+// Until they exist, these provider screens borrow an existing capture.
+const PRO_FALLBACK = { home: 'dashboard', wallet: 'dashboard', missions: 'dashboard' };
+
+/**
+ * Best capture for a screen: same language + theme, then same language, then same theme, then the default set.
+ * On the provider side, the `pro-` capture wins when there is one.
+ */
+export function screenSrc(id, isDark, lang, provider = false) {
+  if (provider) {
+    const theme = isDark ? 'dark' : 'light';
+    const base = (lang || 'en').split('-')[0];
+    const pro =
+      VARIANTS[`pro-${id}.${base}.${theme}`] ||
+      VARIANTS[`pro-${id}.${base}`] ||
+      VARIANTS[`pro-${id}.${theme}`] ||
+      ['en', 'fr', 'ar'].map((l) => VARIANTS[`pro-${id}.${l}.${theme}`]).find(Boolean);
+    if (pro) return pro;
+    if (PRO_FALLBACK[id]) return resolve(PRO_FALLBACK[id], isDark, lang);
+  }
+  return resolve(id, isDark, lang) || (PRO_FALLBACK[id] && resolve(PRO_FALLBACK[id], isDark, lang));
 }

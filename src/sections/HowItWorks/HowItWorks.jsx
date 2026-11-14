@@ -5,12 +5,15 @@ import { MOTION_OK, gsap } from '../../animations/gsap';
 import SectionHeading from '../../components/SectionHeading';
 import { useGsap } from '../../hooks/useGsap';
 import { cn } from '../../utils/cn';
+import { useAudience, useAudienceT } from '../../context/AudienceContext';
 
 const ICONS = [Search, Users, Handshake, CircleCheckBig];
 
 export default function HowItWorks() {
   const { t, i18n } = useTranslation();
-  const steps = t('how.steps');
+  const at = useAudienceT();
+  const { audience } = useAudience();
+  const steps = at('how.steps');
   const root = useRef(null);
   const [reached, setReached] = useState(-1);
   const reachedRef = useRef(-1);
@@ -63,13 +66,13 @@ export default function HowItWorks() {
         });
       },
     );
-  }, [steps.length, i18n.language]);
+  }, [steps.length, i18n.language, audience]);
 
   return (
     <section ref={root} id="how" aria-labelledby="how-title" className="section isolate overflow-hidden bg-bg-soft">
       <div aria-hidden className="grid-bg absolute inset-0 -z-10" />
       <div className="container">
-        <SectionHeading id="how-title" eyebrow={t('how.eyebrow')} title={t('how.title')} description={t('how.description')} />
+        <SectionHeading id="how-title" eyebrow={t('how.eyebrow')} title={at('how.title')} description={at('how.description')} />
 
         <ol data-track className="relative mt-16 grid gap-8 ps-14 lg:mt-24 lg:grid-cols-4 lg:gap-6 lg:ps-0 lg:pt-20">
           {/* connecting lines */}

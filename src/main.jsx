@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import './i18n';
 import './styles/index.css';
 import App from './App';
+import { AudienceProvider } from './context/AudienceContext';
 import { LanguageProvider } from './context/LanguageContext';
 import { ThemeProvider } from './context/ThemeContext';
 
@@ -12,7 +13,9 @@ createRoot(document.getElementById('root')).render(
     <BrowserRouter>
       <ThemeProvider>
         <LanguageProvider>
-          <App />
+          <AudienceProvider>
+            <App />
+          </AudienceProvider>
         </LanguageProvider>
       </ThemeProvider>
     </BrowserRouter>

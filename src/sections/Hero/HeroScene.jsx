@@ -180,7 +180,7 @@ function FakeShadow({ y }) {
   );
 }
 
-function Rig({ pointer, compact, reduced, isDark, lang }) {
+function Rig({ pointer, compact, reduced, isDark, lang, provider }) {
   const group = useRef();
   const main = useRef();
   const left = useRef();
@@ -188,10 +188,11 @@ function Rig({ pointer, compact, reduced, isDark, lang }) {
   const t0 = useRef(null);
 
   const [homeLight, homeDark, dashLight, dashDark, bot] = useTexture([
-    screenSrc('home', false, lang),
-    screenSrc('home', true, lang),
-    screenSrc('dashboard', false, lang),
-    screenSrc('dashboard', true, lang),
+    // main phone shows the visitor's side, the small one the other side
+    screenSrc('home', false, lang, provider),
+    screenSrc('home', true, lang, provider),
+    provider ? screenSrc('home', false, lang) : screenSrc('dashboard', false, lang),
+    provider ? screenSrc('home', true, lang) : screenSrc('dashboard', true, lang),
     screenSrc('servibot', isDark, lang),
   ]);
 
@@ -241,7 +242,7 @@ function Rig({ pointer, compact, reduced, isDark, lang }) {
   );
 }
 
-export default function HeroScene({ isDark, lang, compact = false, reduced = false, active = true }) {
+export default function HeroScene({ isDark, lang, provider = false, compact = false, reduced = false, active = true }) {
   const pointer = useRef({ x: 0, y: 0 });
 
   useEffect(() => {
@@ -272,7 +273,7 @@ export default function HeroScene({ isDark, lang, compact = false, reduced = fal
         <Lightformer form="ring" intensity={2} color="#b98fff" position={[0, 0, -4]} scale={3} />
       </Environment>
       <Particles count={compact ? 160 : 420} reduced={reduced} />
-      <Rig pointer={pointer} compact={compact} reduced={reduced} isDark={isDark} lang={lang} />
+      <Rig pointer={pointer} compact={compact} reduced={reduced} isDark={isDark} lang={lang} provider={provider} />
     </Canvas>
   );
 }

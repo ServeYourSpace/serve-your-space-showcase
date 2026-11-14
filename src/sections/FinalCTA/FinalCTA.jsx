@@ -7,9 +7,11 @@ import Button from '../../components/Button';
 import Wordmark from '../../components/Wordmark';
 import { CONTACT_EMAIL } from '../../data/navigation';
 import { usePrefersReducedMotion } from '../../hooks/useMediaQuery';
+import { useAudienceT } from '../../context/AudienceContext';
 
 export default function FinalCTA() {
   const { t } = useTranslation();
+  const at = useAudienceT();
   const ref = useRef(null);
   const reduced = usePrefersReducedMotion();
   const { scrollYProgress } = useScroll({ target: ref, offset: ['start end', 'end start'] });
@@ -41,7 +43,7 @@ export default function FinalCTA() {
           </motion.div>
           <AnimatedWords id="cta-title" text={t('cta.title')} className="mx-auto mt-8 max-w-4xl font-display text-[2.4rem] font-extrabold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl" />
           <motion.p variants={fadeUp} custom={2} initial="hidden" whileInView="show" viewport={viewport} className="mx-auto mt-6 max-w-2xl text-lg text-white/80">
-            {t('cta.description')}
+            {at('cta.description')}
           </motion.p>
           <motion.div variants={fadeUp} custom={3} initial="hidden" whileInView="show" viewport={viewport} className="mt-10 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
             <Button href="#download" variant="light">

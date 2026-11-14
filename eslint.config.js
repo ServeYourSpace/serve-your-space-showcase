@@ -20,7 +20,7 @@ export default [
       'react/jsx-uses-vars': 'error',
       'react/jsx-uses-react': 'off',
       'no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
-      'react-refresh/only-export-components': ['warn', { allowConstantExport: true, allowExportNames: ['useTheme', 'useLanguage'] }],
+      'react-refresh/only-export-components': ['warn', { allowConstantExport: true, allowExportNames: ['useAudience', 'useAudienceT', 'useTheme', 'useLanguage'] }],
     },
   },
 ];

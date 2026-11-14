@@ -8,6 +8,8 @@ import Button from '../../components/Button';
 import HandNote from '../../components/HandNote';
 import PhoneFrame from '../../components/PhoneFrame';
 import ScreenImage from '../../components/ScreenImage';
+import AudienceSwitch from '../../components/AudienceSwitch';
+import { useAudience, useAudienceT } from '../../context/AudienceContext';
 import { useScreenSrc } from '../../hooks/useScreenSrc';
 import { useTheme } from '../../context/ThemeContext';
 import { useInView } from '../../hooks/useInView';
@@ -68,6 +70,8 @@ function FloatCard({ children, className, depth = 20, mx, my, delay = 0 }) {
 
 export default function Hero() {
   const { t, i18n } = useTranslation();
+  const at = useAudienceT();
+  const { isProvider } = useAudience();
   const { isDark } = useTheme();
   const reduced = usePrefersReducedMotion();
   const compact = useMediaQuery('(max-width: 767px)');
@@ -75,7 +79,7 @@ export default function Hero() {
   const visualRef = useRef(null);
   const inView = useInView(visualRef);
   const [webgl, setWebgl] = useState(true);
-  const cards = t('hero.cards');
+  const cards = at('hero.cards');
 
   useEffect(() => setWebgl(hasWebGL()), []);
 
@@ -118,6 +122,9 @@ export default function Hero() {
       <div className="container grid items-center gap-6 lg:grid-cols-[1.05fr_1fr] lg:gap-4">
         {/* copy */}
         <motion.div style={{ y: textY, opacity: fade }} className="relative z-10 text-center lg:text-start">
+          <motion.div initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, ease }} className="mb-6">
+            <AudienceSwitch />
+          </motion.div>
           <motion.p
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
@@ -128,7 +135,7 @@ export default function Hero() {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-400 opacity-60" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-brand-500" />
             </span>
-            {t('hero.badge')}
+            {at('hero.badge')}
           </motion.p>
 
           <h1 id="hero-title" className="mt-6 font-display text-[2.75rem] font-extrabold leading-[1.02] tracking-tight sm:text-6xl lg:text-[4.4rem] xl:text-[5.2rem]">
@@ -143,7 +150,7 @@ export default function Hero() {
             transition={{ duration: 0.8, ease, delay: 0.75 }}
             className="lead mx-auto mt-6 max-w-xl lg:mx-0"
           >
-            {t('hero.description')}
+            {at('hero.description')}
           </motion.p>
 
           <motion.div
@@ -152,7 +159,7 @@ export default function Hero() {
             transition={{ duration: 0.8, ease, delay: 0.9 }}
             className="mt-9 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center lg:justify-start"
           >
-            <Button href="#about">{t('hero.ctaPrimary')}</Button>
+            <Button href="#about">{at('hero.ctaPrimary')}</Button>
             <Button href="#features" variant="ghost">
               {t('hero.ctaSecondary')}
             </Button>
@@ -186,7 +193,7 @@ export default function Hero() {
             {webgl ? (
               <SceneBoundary fallback={fallback}>
                 <Suspense fallback={fallback}>
-                  <HeroScene isDark={isDark} lang={i18n.language} compact={compact} reduced={reduced} active={inView} />
+                  <HeroScene isDark={isDark} lang={i18n.language} provider={isProvider} compact={compact} reduced={reduced} active={inView} />
                 </Suspense>
               </SceneBoundary>
             ) : (
