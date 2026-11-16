@@ -8,6 +8,7 @@ import Wordmark from '../../components/Wordmark';
 import { CONTACT_EMAIL } from '../../data/navigation';
 import { usePrefersReducedMotion } from '../../hooks/useMediaQuery';
 import { useAudienceT } from '../../context/AudienceContext';
+import Magnet from '../../components/reactbits/Magnet';
 
 export default function FinalCTA() {
   const { t } = useTranslation();
@@ -46,9 +47,11 @@ export default function FinalCTA() {
             {at('cta.description')}
           </motion.p>
           <motion.div variants={fadeUp} custom={3} initial="hidden" whileInView="show" viewport={viewport} className="mt-10 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
-            <Button href="#download" variant="light">
-              {t('cta.primary')}
-            </Button>
+            <Magnet padding={70} magnetStrength={4} wrapperClassName="sm:!inline-block" innerClassName="w-full">
+              <Button href="#download" variant="light" className="w-full">
+                {t('cta.primary')}
+              </Button>
+            </Magnet>
             <Button href={`mailto:${CONTACT_EMAIL}`} variant="ghost" icon={false} className="!border-white/30 !bg-white/10 !text-white hover:!bg-white/20">
               {t('cta.secondary')}
             </Button>

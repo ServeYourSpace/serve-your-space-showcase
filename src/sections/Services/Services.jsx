@@ -10,6 +10,7 @@ import { SERVICES, servicePath } from '../../data/services';
 
 const MotionLink = motion.create(Link);
 import { cn } from '../../utils/cn';
+import ScrollVelocity from '../../components/reactbits/ScrollVelocity';
 
 const ICONS = { Wrench, Zap, PaintRoller, Sparkles, Hammer, Sprout, House, GraduationCap, Scissors, Dumbbell };
 
@@ -136,15 +137,17 @@ export default function Services() {
       </div>
 
       {/* marquee of categories */}
-      <div aria-hidden className="relative mt-16 overflow-hidden py-2 [mask-image:linear-gradient(90deg,transparent,black_12%,black_88%,transparent)]" dir="ltr">
-        <div className="flex w-max animate-marquee gap-10 whitespace-nowrap font-display text-4xl font-bold text-ink/10 sm:text-6xl dark:text-white/10">
-          {[...names, ...names].map((n, i) => (
-            <span key={`${n}-${i}`} className="flex items-center gap-10">
-              {n}
-              <span className="text-brand-500/40">✦</span>
-            </span>
-          ))}
-        </div>
+      {/* category names that speed up and lean with the scroll */}
+      <div aria-hidden className="relative mt-16 py-2" dir="ltr">
+        <ScrollVelocity
+          texts={[names.slice(0, 5).join('  ✦  ') + '  ✦  ', names.slice(5).join('  ✦  ') + '  ✦  ']}
+          velocity={40}
+          numCopies={4}
+          fadeEdges
+          skewWithVelocity={6}
+          outlineAlternate
+          className="px-4 font-display text-4xl font-bold text-ink/10 sm:text-6xl dark:text-white/10"
+        />
       </div>
     </section>
   );

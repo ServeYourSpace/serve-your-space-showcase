@@ -7,11 +7,12 @@ import MainLayout from './layouts/MainLayout';
 import HomePage from './pages/HomePage';
 import NotFoundPage from './pages/NotFoundPage';
 import ServiceDetailPage from './pages/ServiceDetailPage';
+import { smoothScrollTo } from './utils/smoothScroll';
 
 function ScrollReset() {
   const { pathname, hash } = useLocation();
   useEffect(() => {
-    if (!hash) window.scrollTo(0, 0);
+    if (!hash) smoothScrollTo(0, { immediate: true });
     const id = window.setTimeout(() => ScrollTrigger.refresh(), 200);
     return () => window.clearTimeout(id);
   }, [pathname, hash]);

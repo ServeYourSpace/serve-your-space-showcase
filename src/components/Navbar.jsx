@@ -9,6 +9,7 @@ import Button from './Button';
 import LanguageSelector from './LanguageSelector';
 import Logo from './Logo';
 import ThemeToggle from './ThemeToggle';
+import { lockScroll } from '../utils/smoothScroll';
 
 // Sections without their own nav entry highlight their parent item (or none).
 const ALIASES = { showcase: 'features', how: null, 'get-started': null };
@@ -33,10 +34,12 @@ export default function Navbar() {
     if (!open) return undefined;
     const prev = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
+    lockScroll(true);
     const onKey = (e) => e.key === 'Escape' && setOpen(false);
     window.addEventListener('keydown', onKey);
     return () => {
       document.body.style.overflow = prev;
+      lockScroll(false);
       window.removeEventListener('keydown', onKey);
     };
   }, [open]);
@@ -97,7 +100,7 @@ export default function Navbar() {
           <div className="flex items-center gap-2">
             <LanguageSelector className="hidden sm:block" />
             <ThemeToggle className="hidden sm:inline-flex" />
-            <Button href="/#download" className="hidden !min-h-[44px] !px-5 !py-2.5 text-sm lg:inline-flex">
+            <Button href="/#download" className="border-beam hidden !min-h-[44px] !px-5 !py-2.5 text-sm lg:inline-flex">
               {t('nav.cta')}
             </Button>
             <button

@@ -7,6 +7,8 @@ import AnimatedWords from '../../components/AnimatedWords';
 import HandNote from '../../components/HandNote';
 import { usePrefersReducedMotion } from '../../hooks/useMediaQuery';
 import { cn } from '../../utils/cn';
+import SpotlightCard from '../../components/reactbits/SpotlightCard';
+import { useTheme } from '../../context/ThemeContext';
 
 const CAP_ICONS = [MessageSquareText, Search, MapPin, UserRound];
 const SUGGESTION_ICONS = [UserRound, MapPin, MessageSquareText];
@@ -140,6 +142,7 @@ function ChatWindow() {
 
 export default function ServiBot() {
   const { t } = useTranslation();
+  const { isDark } = useTheme();
   const caps = t('servibot.capabilities');
 
   return (
@@ -174,7 +177,15 @@ export default function ServiBot() {
                 {caps.map((c, i) => {
                   const Icon = CAP_ICONS[i];
                   return (
-                    <motion.li key={c.title} variants={fadeUp} className="glass flex gap-3 rounded-3xl p-4">
+                    <motion.li key={i} variants={fadeUp}>
+                      <SpotlightCard
+                        theme={isDark ? 'dark' : 'light'}
+                        spotlightColor="#8a47fa"
+                        intensity={0.35}
+                        spotlightSize={220}
+                        className="glass flex h-full gap-3 !rounded-3xl !p-4"
+                        style={{ '--spotlight-card-surface': 'transparent' }}
+                      >
                       <span className="grid h-10 w-10 shrink-0 place-items-center rounded-2xl bg-brand-500/12 text-brand-600 dark:text-brand-200">
                         <Icon aria-hidden className="h-5 w-5" />
                       </span>
@@ -182,6 +193,7 @@ export default function ServiBot() {
                         <h3 className="font-semibold">{c.title}</h3>
                         <p className="mt-1 text-sm leading-relaxed text-muted">{c.text}</p>
                       </div>
+                      </SpotlightCard>
                     </motion.li>
                   );
                 })}

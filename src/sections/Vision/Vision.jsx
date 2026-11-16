@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { fadeUp, stagger, viewport } from '../../animations/variants';
 import AmbientGlow from '../../components/AmbientGlow';
 import AnimatedWords from '../../components/AnimatedWords';
+import ScrollReveal from '../../components/reactbits/ScrollReveal';
 
 const VALUE_ICONS = [Lightbulb, Feather, ShieldCheck, Accessibility, Cpu];
 
@@ -26,7 +27,7 @@ function Pillar({ icon: Icon, label, text, index }) {
 }
 
 export default function Vision() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const values = t('vision.values');
 
   return (
@@ -44,9 +45,9 @@ export default function Vision() {
               className="mt-5 font-display text-[2.3rem] font-bold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl"
             />
           </div>
-          <motion.p variants={fadeUp} custom={2} initial="hidden" whileInView="show" viewport={viewport} className="lead lg:pb-3">
+          <ScrollReveal key={i18n.language} baseOpacity={0.15} baseRotation={2} blurStrength={3} containerClassName="lg:pb-3" textClassName="lead !text-[1.15rem] sm:!text-xl">
             {t('vision.intro')}
-          </motion.p>
+          </ScrollReveal>
         </div>
 
         <motion.div

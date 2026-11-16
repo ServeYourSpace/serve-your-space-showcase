@@ -15,6 +15,8 @@ import { useTheme } from '../../context/ThemeContext';
 import { useInView } from '../../hooks/useInView';
 import { useMediaQuery, usePrefersReducedMotion } from '../../hooks/useMediaQuery';
 import { cn } from '../../utils/cn';
+import Magnet from '../../components/reactbits/Magnet';
+import ShinyText from '../../components/reactbits/ShinyText';
 
 const HeroScene = lazy(() => import('./HeroScene'));
 
@@ -135,7 +137,7 @@ export default function Hero() {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-400 opacity-60" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-brand-500" />
             </span>
-            {at('hero.badge')}
+            <ShinyText text={at('hero.badge')} color={isDark ? '#c9b3ff' : '#6d28d9'} shineColor={isDark ? '#ffffff' : '#c084fc'} speed={3} delay={1.5} />
           </motion.p>
 
           <h1 id="hero-title" className="mt-6 font-display text-[2.75rem] font-extrabold leading-[1.02] tracking-tight sm:text-6xl lg:text-[4.4rem] xl:text-[5.2rem]">
@@ -159,7 +161,9 @@ export default function Hero() {
             transition={{ duration: 0.8, ease, delay: 0.9 }}
             className="mt-9 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center lg:justify-start"
           >
-            <Button href="#about">{at('hero.ctaPrimary')}</Button>
+            <Magnet padding={60} magnetStrength={4} disabled={reduced} wrapperClassName="sm:!inline-block" innerClassName="w-full">
+              <Button href="#about" className="w-full">{at('hero.ctaPrimary')}</Button>
+            </Magnet>
             <Button href="#features" variant="ghost">
               {t('hero.ctaSecondary')}
             </Button>

@@ -9,6 +9,7 @@ import StoreBadges from '../../components/StoreBadges';
 import ThemeToggle from '../../components/ThemeToggle';
 import { CONTACT_EMAIL, NAV_ITEMS } from '../../data/navigation';
 import { SERVICES, servicePath } from '../../data/services';
+import { smoothScrollTo } from '../../utils/smoothScroll';
 
 const linkCls = 'inline-flex min-h-[34px] items-center text-muted transition hover:translate-x-0.5 hover:text-brand-500 rtl:hover:-translate-x-0.5';
 const headCls = 'text-sm font-bold uppercase tracking-[0.12em] text-ink';
@@ -101,7 +102,7 @@ export default function Footer() {
           <p>
             © {year} ServeYourSpace. {t('footer.rights')}
           </p>
-          <a href="#main" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="inline-flex min-h-[44px] items-center gap-2 transition hover:text-brand-500">
+          <a href="#main" onClick={(e) => { e.preventDefault(); smoothScrollTo(0); }} className="inline-flex min-h-[44px] items-center gap-2 transition hover:text-brand-500">
             {t('footer.backToTop')}
             <ArrowUp aria-hidden className="h-4 w-4" />
           </a>

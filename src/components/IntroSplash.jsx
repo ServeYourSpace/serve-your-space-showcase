@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { lockScroll } from '../utils/smoothScroll';
 
 const KEY = 'sys-intro-seen';
 const BRAND_BG = '#5e15ea'; // background colour of the logo animation
@@ -35,12 +36,14 @@ export default function IntroSplash() {
     if (!show) return undefined;
     const prev = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
+    lockScroll(true);
     const safety = window.setTimeout(close, 6500); // never trap the visitor
     const onKey = (e) => e.key === 'Escape' && close();
     window.addEventListener('keydown', onKey);
     videoRef.current?.play().catch(() => close());
     return () => {
       document.body.style.overflow = prev;
+      lockScroll(false);
       window.clearTimeout(safety);
       window.removeEventListener('keydown', onKey);
     };
