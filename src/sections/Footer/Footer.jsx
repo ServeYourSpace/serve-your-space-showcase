@@ -102,6 +102,14 @@ export default function Footer() {
           <p>
             © {year} ServeYourSpace. {t('footer.rights')}
           </p>
+          <nav className="flex gap-5">
+            <Link to="/cgu" className="inline-flex min-h-[44px] items-center transition hover:text-brand-500">
+              {t('footer.terms')}
+            </Link>
+            <Link to="/confidentialite" className="inline-flex min-h-[44px] items-center transition hover:text-brand-500">
+              {t('footer.privacy')}
+            </Link>
+          </nav>
           <a href="#main" onClick={(e) => { e.preventDefault(); smoothScrollTo(0); }} className="inline-flex min-h-[44px] items-center gap-2 transition hover:text-brand-500">
             {t('footer.backToTop')}
             <ArrowUp aria-hidden className="h-4 w-4" />
