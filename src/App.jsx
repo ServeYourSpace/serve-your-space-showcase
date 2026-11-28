@@ -5,6 +5,7 @@ import { ScrollTrigger } from './animations/gsap';
 import { useLanguage } from './context/LanguageContext';
 import MainLayout from './layouts/MainLayout';
 import HomePage from './pages/HomePage';
+import LegalPage from './pages/LegalPage';
 import NotFoundPage from './pages/NotFoundPage';
 import ServiceDetailPage from './pages/ServiceDetailPage';
 import { smoothScrollTo } from './utils/smoothScroll';
@@ -39,6 +40,8 @@ export default function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/services/:serviceKey" element={<ServiceDetailPage />} />
+          <Route path="/confidentialite" element={<LegalPage kind="privacy" />} />
+          <Route path="/cgu" element={<LegalPage kind="terms" />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </MainLayout>
